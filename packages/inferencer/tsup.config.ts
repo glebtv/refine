@@ -28,6 +28,7 @@ export default defineConfig({
     },
     esbuildOptions(options) {
         options.keepNames = true;
+        options.external = ['react'];
     },
     onSuccess: "tsc --project tsconfig.declarations.json",
 });

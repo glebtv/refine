@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "@mantine/core";
+import { AppShell } from "@mantine/core";
 
 import { RefineThemedLayoutV2Props } from "./types";
 import { ThemedSiderV2 as DefaultSider } from "./sider";
@@ -18,32 +18,28 @@ export const ThemedLayoutV2: React.FC<RefineThemedLayoutV2Props> = ({
     const SiderToRender = Sider ?? DefaultSider;
     const HeaderToRender = Header ?? DefaultHeader;
 
-    return (
-        <ThemedLayoutContextProvider
-            initialSiderCollapsed={initialSiderCollapsed}
+  return (
+    <ThemedLayoutContextProvider
+        initialSiderCollapsed={initialSiderCollapsed}
         >
-            <Box sx={{ display: "flex" }}>
-                <SiderToRender Title={Title} />
-                <Box
-                    sx={{
-                        display: "flex",
-                        flexDirection: "column",
-                        flex: 1,
-                    }}
-                >
-                    <HeaderToRender />
-                    <Box
-                        component="main"
-                        sx={(theme) => ({
-                            padding: theme.spacing.sm,
-                        })}
-                    >
-                        {children}
-                    </Box>
-                    {Footer && <Footer />}
-                </Box>
-                {OffLayoutArea && <OffLayoutArea />}
-            </Box>
+          <AppShell
+            header={{ height: 50 }}
+            navbar={{ width: 200, breakpoint: 'sm', collapsed: { mobile: true } }}
+            padding="md"
+          >
+
+            <HeaderToRender />
+
+            <SiderToRender Title={Title} />
+
+            <AppShell.Main>
+              {children}
+
+              {Footer && <Footer />}
+            </AppShell.Main>
+
+            {OffLayoutArea && <OffLayoutArea />}
+          </AppShell>
         </ThemedLayoutContextProvider>
-    );
+      )
 };

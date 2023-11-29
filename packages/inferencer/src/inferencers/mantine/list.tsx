@@ -273,7 +273,7 @@ export const renderer = ({
                             ? " } catch (error) { return null; }"
                             : ""
                     }
-                   
+
                 }
             `;
 
@@ -677,7 +677,7 @@ export const renderer = ({
         header: ${actionColumnTitle},
         cell: function render({ getValue }) {
             return (
-                <Group spacing="xs" noWrap>
+                <Group spacing="xs">
                     ${
                         canShow
                             ? jsx`
@@ -743,7 +743,7 @@ export const renderer = ({
     return jsx`
     import React from "react";
     ${printImports(imports)}
-    
+
     export const ${COMPONENT_NAME}: React.FC<IResourceComponentsProps> = () => {
         ${useTranslateHook}
         const columns = React.useMemo<ColumnDef<any>[]>(() => [
@@ -841,7 +841,7 @@ export const renderer = ({
                             })}
                         </tbody>
                     </Table>
-                </ScrollArea>    
+                </ScrollArea>
                 <br />
                 <Pagination
                     position="right"

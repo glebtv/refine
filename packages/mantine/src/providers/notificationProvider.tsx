@@ -49,8 +49,8 @@ export const notificationProvider = (): NotificationProvider => {
                     updateNotification({
                         id: key!,
                         message: (
-                            <Group position="apart" noWrap>
-                                <Group spacing="xs" position="center">
+                            <Group>
+                                <Group>
                                     <RingCountdown
                                         undoableTimeout={undoableTimeout ?? 0}
                                     />
@@ -75,15 +75,6 @@ export const notificationProvider = (): NotificationProvider => {
                                 </ActionIcon>
                             </Group>
                         ),
-                        styles: {
-                            root: {
-                                paddingLeft: "8px",
-                                paddingTop: "0px",
-                                paddingBottom: "0px",
-                                "&::before": { display: "none" },
-                            },
-                        },
-                        disallowClose: true,
                         autoClose: false,
                     });
                 } else {
@@ -91,8 +82,8 @@ export const notificationProvider = (): NotificationProvider => {
                     showNotification({
                         id: key,
                         message: (
-                            <Group position="apart" noWrap>
-                                <Group spacing="xs" position="center">
+                            <Group>
+                                <Group>
                                     <RingCountdown
                                         undoableTimeout={undoableTimeout ?? 0}
                                     />
@@ -117,16 +108,6 @@ export const notificationProvider = (): NotificationProvider => {
                                 </ActionIcon>
                             </Group>
                         ),
-
-                        styles: {
-                            root: {
-                                paddingLeft: "8px",
-                                paddingTop: "0px",
-                                paddingBottom: "0px",
-                                "&::before": { display: "none" },
-                            },
-                        },
-                        disallowClose: true,
                         autoClose: false,
                     });
                 }

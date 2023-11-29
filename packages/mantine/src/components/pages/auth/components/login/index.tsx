@@ -99,14 +99,14 @@ export const LoginPage: React.FC<LoginProps> = ({
         if (providers && providers.length > 0) {
             return (
                 <>
-                    <Stack spacing={8}>
+                    <Stack>
                         {providers.map((provider) => {
                             return (
                                 <Button
                                     key={provider.name}
                                     variant="default"
                                     fullWidth
-                                    leftIcon={provider.icon}
+                                    leftSection={provider.icon}
                                     onClick={() =>
                                         login({
                                             providerName: provider.name,
@@ -135,7 +135,6 @@ export const LoginPage: React.FC<LoginProps> = ({
         <Card style={cardStyles} {...(contentProps ?? {})}>
             <Title
                 style={titleStyles}
-                color={theme.colorScheme === "dark" ? "brand.5" : "brand.8"}
             >
                 {translate("pages.login.title", "Sign in to your account")}
             </Title>
@@ -220,7 +219,7 @@ export const LoginPage: React.FC<LoginProps> = ({
                 </FormProvider>
             )}
             {registerLink ?? (
-                <Text mt="md" size="xs" align="center">
+                <Text mt="md" size="xs">
                     {translate(
                         "pages.login.buttons.noAccount",
                         "Don’t have an account?",
