@@ -20,7 +20,7 @@ import { RefineThemedLayoutHeaderProps } from "../types";
 
 import { useThemedLayoutContext } from "@hooks";
 
-export const Header: React.FC<RefineThemedLayoutHeaderProps> = ({}) => {
+export const ThemedHeader: React.FC<RefineThemedLayoutHeaderProps> = ({}) => {
     const theme = useMantineTheme();
 
     const { siderCollapsed, mobileSiderOpen, setMobileSiderOpen } =

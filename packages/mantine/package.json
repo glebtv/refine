@@ -29,6 +29,10 @@
   },
   "devDependencies": {
     "@esbuild-plugins/node-resolve": "^0.1.4",
+    "@mantine/core": "^7.2.2",
+    "@mantine/form": "^7.2.2",
+    "@mantine/hooks": "^7.2.2",
+    "@mantine/notifications": "^7.2.2",
     "@refinedev/cli": "^2.16.1",
     "@refinedev/core": "^4.45.0",
     "@refinedev/ui-tests": "^1.13.2",
@@ -41,10 +45,6 @@
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "@types/testing-library__jest-dom": "^5.14.3",
-    "@mantine/core": "^7.2.2",
-    "@mantine/form": "^7.2.2",
-    "@mantine/hooks": "^7.2.2",
-    "@mantine/notifications": "^7.2.2",
     "esbuild-copy-static-files": "^0.1.0",
     "esbuild-plugin-inline-image": "^0.0.8",
     "identity-obj-proxy": "^3.0.0",
@@ -53,7 +53,8 @@
     "react-router-dom": "^6.8.1",
     "ts-jest": "^29.0.3",
     "tsup": "^6.7.0",
-    "typescript": "^4.7.4"
+    "typescript": "^4.7.4",
+    "typescript-plugin-css-modules": "^5.0.2"
   },
   "dependencies": {
     "@emotion/react": "^11.8.2",

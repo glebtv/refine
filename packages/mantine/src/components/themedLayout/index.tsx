@@ -17,17 +17,16 @@ export const ThemedLayout: React.FC<RefineThemedLayoutProps> = ({
 }) => {
     const SiderToRender = Sider ?? DefaultSider;
     const HeaderToRender = Header ?? DefaultHeader;
-    const [opened, { toggle }] = useDisclosure();
 
   return (
     <ThemedLayoutContextProvider>
           <AppShell
             header={{ height: 50 }}
-            navbar={{ width: 200, breakpoint: 'sm', collapsed: { mobile: !opened } }}
+            navbar={{ width: 200, breakpoint: 'sm', collapsed: { mobile: true } }}
             padding="md"
           >
 
-            <HeaderToRender opened={opened} toggle={toggle} />
+            <HeaderToRender />
 
             <SiderToRender Title={Title} />
 
