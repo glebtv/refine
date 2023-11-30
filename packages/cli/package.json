@@ -1,6 +1,6 @@
 {
   "name": "@refinedev/cli",
-  "version": "2.16.21",
+  "version": "2.18.1",
   "description": "refine is a React-based framework for building internal tools, rapidly. It ships with Ant Design System, an enterprise-level UI toolkit.",
   "private": false,
   "main": "dist/index.js",
@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@esbuild-plugins/node-resolve": "^0.1.4",
+    "@refinedev/core": "^4.44.12",
     "@types/center-align": "^1.0.0",
     "@types/dedent": "^0.7.0",
     "@types/envinfo": "^7.8.1",
@@ -40,11 +41,9 @@
     "react-dom": "^18.0.0",
     "ts-jest": "^29.0.3",
     "tsup": "^6.7.0",
-    "typescript": "^4.7.4",
-    "@refinedev/core": "^4.44.12"
+    "typescript": "^4.7.4"
   },
   "dependencies": {
-    "typescript": "^4.7.4",
     "boxen": "^5.1.2",
     "cardinal": "^2.1.1",
     "center-align": "1.0.1",
@@ -68,21 +67,18 @@
     "jscodeshift": "0.13.1",
     "marked": "^4.3.0",
     "marked-terminal": "^6.0.0",
+    "node-emoji": "^2.1.3",
     "node-env-type": "^0.0.8",
     "node-fetch": "^2.6.7",
     "ora": "^5.4.1",
     "pluralize": "^8.0.0",
     "preferred-pm": "^3.0.3",
     "prettier": "^2.7.1",
-    "semver": "7.3.8",
+    "semver": "^7.5.4",
     "semver-diff": "^3.1.1",
     "temp": "^0.9.4",
     "tslib": "^2.3.1",
-    "marked": "^4.3.0",
-    "marked-terminal": "^6.0.0",
-    "node-emoji": "^2.1.3",
-    "cli-table3": "^0.6.3",
-    "center-align": "1.0.1"
+    "typescript": "^4.7.4"
   },
   "peerDependencies": {
     "react": "^17.0.0 || ^18.0.0"
