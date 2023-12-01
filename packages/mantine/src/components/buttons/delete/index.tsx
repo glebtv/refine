@@ -142,7 +142,7 @@ export const DeleteButton: React.FC<DeleteButtonProps> = ({
                         }
                         data-testid={RefineButtonTestIds.DeleteButton}
                         className={RefineButtonClassNames.DeleteButton}
-                        variant={variant ?? "outline"}
+                        variant={mapButtonVariantToActionIconVariant(variant, "outline")}
                         {...commonProps}
                     >
                         <IconTrash size={18} {...svgIconProps} />

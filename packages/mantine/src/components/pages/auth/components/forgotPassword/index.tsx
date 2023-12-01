@@ -124,7 +124,7 @@ export const ForgotPasswordPage: React.FC<ResetPassworProps> = ({
                     />
 
                     {loginLink ?? (
-                        <Group mt="md">
+                        <Group mt="md" justify={loginLink ? "left" : "right"}>
                             <Text size="xs">
                                 {translate(
                                     "pages.login.forgotPassword.haveAccount",

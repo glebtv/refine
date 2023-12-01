@@ -29,15 +29,15 @@ export const ReadyPage: React.FC<RefineReadyPageProps> = () => {
             <Title>
                 Welcome on board
             </Title>
-            <Text>
+            <Text size="xl" >
                 Your configuration is completed.
             </Text>
-            <Text>
+            <Text size="lg">
                 Now you can get started by adding your resources to the{" "}
                 <Code>resources</Code> property of <Code>Refine</Code>.
             </Text>
             <Space h={48} />
-            <Group>
+            <Group justify="center">
                 <Anchor
                     href="https://refine.dev"
                     target="_blank"

@@ -33,7 +33,7 @@ export const ImportButton: React.FC<ImportButtonProps> = ({
             <input {...inputProps} id="contained-button-file" multiple hidden />
             {hideText ? (
                 <ActionIcon
-                    variant={variant ?? "default"}
+                    variant={mapButtonVariantToActionIconVariant(variant, "default")}
                     component="span"
                     loading={loading}
                     data-testid={RefineButtonTestIds.ImportButton}

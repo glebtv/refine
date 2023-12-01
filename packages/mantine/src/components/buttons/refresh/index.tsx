@@ -72,7 +72,7 @@ export const RefreshButton: React.FC<RefreshButtonProps> = ({
             loading={isInvalidating}
             data-testid={RefineButtonTestIds.RefreshButton}
             className={RefineButtonClassNames.RefreshButton}
-            variant={variant ?? "default"}
+            variant={mapButtonVariantToActionIconVariant(variant, "default")}
             {...commonProps}
         >
             <IconRefresh size={18} {...svgIconProps} />

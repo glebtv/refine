@@ -77,8 +77,8 @@ export const List: React.FC<ListProps> = (props) => {
 
     return (
         <Card p="md" {...wrapperProps}>
-            <Group {...headerProps}>
-                <Stack>
+            <Group justify="apart" align="center" {...headerProps}>
+                <Stack gap="xs">
                     {breadcrumbComponent}
                     {title ?? (
                         <Title
@@ -98,7 +98,7 @@ export const List: React.FC<ListProps> = (props) => {
                         </Title>
                     )}
                 </Stack>
-                <Group {...headerButtonProps}>
+                <Group gap="xs" {...headerButtonProps}>
                     {headerButtons}
                 </Group>
             </Group>

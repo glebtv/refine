@@ -195,7 +195,7 @@ export const renderer = ({
                     })
 
                     return (
-                        <Group spacing="xs">
+                        <Group gap="xs">
                             {${getVariableName(
                                 field.key,
                             )}?.map((item, index) => (
@@ -284,7 +284,7 @@ export const renderer = ({
                     cell: function render({ getValue }) {
                         ${field?.accessor ? "try {" : ""}
                             return (
-                                <Group spacing="xs">
+                                <Group gap="xs">
                                     {getValue<any[]>()?.map((item, index) => (
                                         <Image src={${val}} key={index} sx={{ maxWidth: "100px" }} />
                                     ))}
@@ -345,7 +345,7 @@ export const renderer = ({
                 cell = `
                     cell: function render({ getValue }) {
                         return (
-                            <Group spacing="xs">
+                            <Group gap="xs">
                                 {getValue<any>()?.map((item, index) => (
                                     <TagField value={${val}} key={index} />
                                 ))}
@@ -401,7 +401,7 @@ export const renderer = ({
                 cell = `
                     cell: function render({ getValue }) {
                         return (
-                            <Group spacing="xs">
+                            <Group gap="xs">
                                 {getValue<any[]>()?.map((item, index) => (
                                     <TagField value={${val}} key={index} />
                                 ))}
@@ -455,7 +455,7 @@ export const renderer = ({
                 cell = `
                     cell: function render({ getValue }) {
                         return (
-                            <Group spacing="xs">
+                            <Group gap="xs">
                                 {getValue<any[]>()?.map((item, index) => (
                                     <BooleanField value={${val}} key={index} />
                                 ))}
@@ -510,7 +510,7 @@ export const renderer = ({
                 cell = `
                     cell: function render({ getValue }) {
                         return (
-                            <Group spacing="xs">
+                            <Group gap="xs">
                                 {getValue<any[]>()?.map((item, index) => (
                                     <DateField value={${val}} key={index} />
                                 ))}
@@ -563,7 +563,7 @@ export const renderer = ({
                 cell = `
                     cell: function render({ getValue }) {
                         return (
-                            <Group spacing="xs">
+                            <Group gap="xs">
                                 {getValue<string[]>()?.map((item, index) => (
                                     <MarkdownField value={${val}} key={index} />
                                 ))}
@@ -612,7 +612,7 @@ export const renderer = ({
                 cell = `
                     cell: function render({ getValue }) {
                         return (
-                            <Group spacing="xs">
+                            <Group gap="xs">
                                 {getValue<any[]>()?.map((item, index) => (
                                     <TagField value={${val}} key={index} />
                                 ))}
@@ -677,7 +677,7 @@ export const renderer = ({
         header: ${actionColumnTitle},
         cell: function render({ getValue }) {
             return (
-                <Group spacing="xs">
+                <Group gap="xs">
                     ${
                         canShow
                             ? jsx`

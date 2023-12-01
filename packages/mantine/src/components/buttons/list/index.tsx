@@ -109,7 +109,7 @@ export const ListButton: React.FC<ListButtonProps> = ({
         >
             {hideText ? (
                 <ActionIcon
-                    variant={variant ?? "default"}
+                    variant={mapButtonVariantToActionIconVariant(variant, "default")}
                     disabled={data?.can === false}
                     title={disabledTitle()}
                     data-testid={RefineButtonTestIds.ListButton}

@@ -113,7 +113,7 @@ export const EditButton: React.FC<EditButtonProps> = ({
                     disabled={data?.can === false}
                     data-testid={RefineButtonTestIds.EditButton}
                     className={RefineButtonClassNames.EditButton}
-                    variant={variant ?? "default"}
+                    variant={mapButtonVariantToActionIconVariant(variant, "default")}
                     {...commonProps}
                 >
                     <IconPencil size={18} {...svgIconProps} />

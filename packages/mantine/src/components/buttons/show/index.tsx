@@ -108,7 +108,7 @@ export const ShowButton: React.FC<ShowButtonProps> = ({
         >
             {hideText ? (
                 <ActionIcon
-                    variant={variant ?? "default"}
+                    variant={mapButtonVariantToActionIconVariant(variant, "default")}
                     disabled={data?.can === false}
                     title={disabledTitle()}
                     data-testid={RefineButtonTestIds.ShowButton}

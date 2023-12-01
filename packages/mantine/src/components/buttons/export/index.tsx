@@ -7,6 +7,7 @@ import {
 import { ActionIcon, Button } from "@mantine/core";
 import { IconFileExport } from "@tabler/icons";
 
+import { mapButtonVariantToActionIconVariant } from "@definitions/button";
 import { ExportButtonProps } from "../types";
 
 /**
@@ -29,7 +30,7 @@ export const ExportButton: React.FC<ExportButtonProps> = ({
     return hideText ? (
         <ActionIcon
             size="md"
-            variant={variant ?? "default"}
+            variant={mapButtonVariantToActionIconVariant(variant, "default")}
             loading={loading}
             data-testid={RefineButtonTestIds.ExportButton}
             // className={RefineButtonClassNames.ExportButton}

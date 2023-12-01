@@ -49,8 +49,8 @@ export const notificationProvider = (): NotificationProvider => {
                     updateNotification({
                         id: key!,
                         message: (
-                            <Group>
-                                <Group>
+                            <Group justify="apart" wrap="nowrap">
+                                <Group gap="xs" justify="center">
                                     <RingCountdown
                                         undoableTimeout={undoableTimeout ?? 0}
                                     />
@@ -82,8 +82,8 @@ export const notificationProvider = (): NotificationProvider => {
                     showNotification({
                         id: key,
                         message: (
-                            <Group>
-                                <Group>
+                            <Group justify="apart" wrap="nowrap">
+                                <Group grap="xs" justify="center">
                                     <RingCountdown
                                         undoableTimeout={undoableTimeout ?? 0}
                                     />
