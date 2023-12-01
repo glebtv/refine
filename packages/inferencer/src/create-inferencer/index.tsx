@@ -357,9 +357,10 @@ export const createInferencer: CreateInferencer = ({
             relationLoading,
         ]);
 
-        const hiddenCodeViewer =
-            process.env.NODE_ENV !== "development" &&
-            hideCodeViewerInProduction;
+        // const hiddenCodeViewer =
+            // process.env.NODE_ENV !== "development" &&
+            // hideCodeViewerInProduction;
+        const hiddenCodeViewer = hideCodeViewerInProduction;
 
         return (
             <>

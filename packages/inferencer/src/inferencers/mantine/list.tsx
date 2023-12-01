@@ -195,7 +195,7 @@ export const renderer = ({
                     })
 
                     return (
-                        <Group spacing="xs">
+                        <Group gap="xs">
                             {${getVariableName(
                                 field.key,
                             )}?.map((item, index) => (
@@ -273,7 +273,7 @@ export const renderer = ({
                             ? " } catch (error) { return null; }"
                             : ""
                     }
-                   
+
                 }
             `;
 
@@ -284,7 +284,7 @@ export const renderer = ({
                     cell: function render({ getValue }) {
                         ${field?.accessor ? "try {" : ""}
                             return (
-                                <Group spacing="xs">
+                                <Group gap="xs">
                                     {getValue<any[]>()?.map((item, index) => (
                                         <Image src={${val}} key={index} sx={{ maxWidth: "100px" }} />
                                     ))}
@@ -345,7 +345,7 @@ export const renderer = ({
                 cell = `
                     cell: function render({ getValue }) {
                         return (
-                            <Group spacing="xs">
+                            <Group gap="xs">
                                 {getValue<any>()?.map((item, index) => (
                                     <TagField value={${val}} key={index} />
                                 ))}
@@ -401,7 +401,7 @@ export const renderer = ({
                 cell = `
                     cell: function render({ getValue }) {
                         return (
-                            <Group spacing="xs">
+                            <Group gap="xs">
                                 {getValue<any[]>()?.map((item, index) => (
                                     <TagField value={${val}} key={index} />
                                 ))}
@@ -455,7 +455,7 @@ export const renderer = ({
                 cell = `
                     cell: function render({ getValue }) {
                         return (
-                            <Group spacing="xs">
+                            <Group gap="xs">
                                 {getValue<any[]>()?.map((item, index) => (
                                     <BooleanField value={${val}} key={index} />
                                 ))}
@@ -510,7 +510,7 @@ export const renderer = ({
                 cell = `
                     cell: function render({ getValue }) {
                         return (
-                            <Group spacing="xs">
+                            <Group gap="xs">
                                 {getValue<any[]>()?.map((item, index) => (
                                     <DateField value={${val}} key={index} />
                                 ))}
@@ -563,7 +563,7 @@ export const renderer = ({
                 cell = `
                     cell: function render({ getValue }) {
                         return (
-                            <Group spacing="xs">
+                            <Group gap="xs">
                                 {getValue<string[]>()?.map((item, index) => (
                                     <MarkdownField value={${val}} key={index} />
                                 ))}
@@ -612,7 +612,7 @@ export const renderer = ({
                 cell = `
                     cell: function render({ getValue }) {
                         return (
-                            <Group spacing="xs">
+                            <Group gap="xs">
                                 {getValue<any[]>()?.map((item, index) => (
                                     <TagField value={${val}} key={index} />
                                 ))}
@@ -677,7 +677,7 @@ export const renderer = ({
         header: ${actionColumnTitle},
         cell: function render({ getValue }) {
             return (
-                <Group spacing="xs" noWrap>
+                <Group gap="xs">
                     ${
                         canShow
                             ? jsx`
@@ -743,7 +743,7 @@ export const renderer = ({
     return jsx`
     import React from "react";
     ${printImports(imports)}
-    
+
     export const ${COMPONENT_NAME}: React.FC<IResourceComponentsProps> = () => {
         ${useTranslateHook}
         const columns = React.useMemo<ColumnDef<any>[]>(() => [
@@ -802,9 +802,9 @@ export const renderer = ({
             <List>
                 <ScrollArea>
                     <Table highlightOnHover>
-                        <thead>
+                        <Table.Thead>
                             {getHeaderGroups().map((headerGroup) => (
-                                <tr key={headerGroup.id}>
+                                <Table.Tr key={headerGroup.id}>
                                     {headerGroup.headers.map((header) => {
                                         return (
                                             <th key={header.id}>
@@ -822,7 +822,7 @@ export const renderer = ({
                                 </tr>
                             ))}
                         </thead>
-                        <tbody>
+                        <Table.Tbody>
                             {getRowModel().rows.map((row) => {
                                 return (
                                     <tr key={row.id}>
@@ -839,16 +839,18 @@ export const renderer = ({
                                     </tr>
                                 );
                             })}
-                        </tbody>
+                        </Table.Tbody>
                     </Table>
-                </ScrollArea>    
-                <br />
-                <Pagination
-                    position="right"
-                    total={pageCount}
-                    page={current}
-                    onChange={setCurrent}
-                />
+                </ScrollArea>
+
+                <Group align="right">
+                    <Pagination
+                        position="right"
+                        total={pageCount}
+                        page={current}
+                        onChange={setCurrent}
+                    />
+                </Group>
             </List>
         );
     };
