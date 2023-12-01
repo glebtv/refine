@@ -802,9 +802,9 @@ export const renderer = ({
             <List>
                 <ScrollArea>
                     <Table highlightOnHover>
-                        <thead>
+                        <Table.Thead>
                             {getHeaderGroups().map((headerGroup) => (
-                                <tr key={headerGroup.id}>
+                                <Table.Tr key={headerGroup.id}>
                                     {headerGroup.headers.map((header) => {
                                         return (
                                             <th key={header.id}>
@@ -822,7 +822,7 @@ export const renderer = ({
                                 </tr>
                             ))}
                         </thead>
-                        <tbody>
+                        <Table.Tbody>
                             {getRowModel().rows.map((row) => {
                                 return (
                                     <tr key={row.id}>
@@ -839,16 +839,18 @@ export const renderer = ({
                                     </tr>
                                 );
                             })}
-                        </tbody>
+                        </Table.Tbody>
                     </Table>
                 </ScrollArea>
-                <br />
-                <Pagination
-                    position="right"
-                    total={pageCount}
-                    page={current}
-                    onChange={setCurrent}
-                />
+
+                <Group align="right">
+                    <Pagination
+                        position="right"
+                        total={pageCount}
+                        page={current}
+                        onChange={setCurrent}
+                    />
+                </Group>
             </List>
         );
     };

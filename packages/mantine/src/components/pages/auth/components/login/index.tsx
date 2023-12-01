@@ -17,6 +17,7 @@ import {
     Title,
     Anchor,
     Button,
+    Group,
     Text,
     Divider,
     Stack,
@@ -25,7 +26,7 @@ import {
     useMantineTheme,
 } from "@mantine/core";
 
-import { ThemedTitle } from "@components";
+import { ThemedTitleV2 } from "@components";
 import { FormContext } from "@contexts/form-context";
 import {
     layoutStyles,
@@ -91,7 +92,7 @@ export const LoginPage: React.FC<LoginProps> = ({
     const PageTitle =
         title === false ? null : (
             <div style={pageTitleStyles}>
-                {title ?? <ThemedTitle collapsed={false} />}
+                {title ?? <ThemedTitleV2 collapsed={false} />}
             </div>
         );
 
@@ -170,13 +171,16 @@ export const LoginPage: React.FC<LoginProps> = ({
                                 "pages.login.fields.password",
                                 "Password",
                             )}
-                            placeholder="●●●●●●●●"
+                            placeholder={translate(
+                                "pages.login.fields.password",
+                                "Password",
+                            )}
                             {...getInputProps("password")}
                         />
                         <Box
                             mt="md"
-                            sx={{
-                                display: "flex",
+                            display="flex"
+                            style={{
                                 alignItems: "center",
                                 justifyContent: "space-between",
                             }}
@@ -219,19 +223,21 @@ export const LoginPage: React.FC<LoginProps> = ({
                 </FormProvider>
             )}
             {registerLink ?? (
-                <Text mt="md" size="xs">
-                    {translate(
-                        "pages.login.buttons.noAccount",
-                        "Don’t have an account?",
-                    )}{" "}
-                    <Anchor
-                        component={ActiveLink as any}
-                        to="/register"
-                        weight={700}
-                    >
-                        {translate("pages.login.signup", "Sign up")}
-                    </Anchor>
-                </Text>
+                <Group mt="md" justify="center">
+                    <Text size="xs">
+                        {translate(
+                            "pages.login.buttons.noAccount",
+                            "Don’t have an account?",
+                        )}{" "}
+                        <Anchor
+                            component={ActiveLink as any}
+                            to="/register"
+                            weight={700}
+                        >
+                            {translate("pages.login.signup", "Sign up")}
+                        </Anchor>
+                    </Text>
+                </Group>
             )}
         </Card>
     );

@@ -6,26 +6,36 @@ import { ThemedSiderV2 as DefaultSider } from "./sider";
 import { ThemedHeaderV2 as DefaultHeader } from "./header";
 import { ThemedLayoutContextProvider } from "../../contexts";
 
-export const ThemedLayoutV2: React.FC<RefineThemedLayoutV2Props> = ({
+import { useThemedLayoutContext } from "@hooks";
+
+const ThemedLayoutV2WithoutContext: React.FC<RefineThemedLayoutV2Props> = ({
     Sider,
     Header,
     Title,
     Footer,
     OffLayoutArea,
-    initialSiderCollapsed,
     children,
 }) => {
     const SiderToRender = Sider ?? DefaultSider;
     const HeaderToRender = Header ?? DefaultHeader;
 
-  return (
-    <ThemedLayoutContextProvider
-        initialSiderCollapsed={initialSiderCollapsed}
-        >
+    const { siderCollapsed, mobileSiderOpen, setMobileSiderOpen } = useThemedLayoutContext();
+
+    return (
           <AppShell
-            header={{ height: 50 }}
-            navbar={{ width: 200, breakpoint: 'sm', collapsed: { mobile: true } }}
+            header={{
+                height: 50
+            }}
+            navbar={{
+                width: siderCollapsed ? 60 : 200,
+                breakpoint: 'sm',
+                collapsed: {
+                    mobile: !mobileSiderOpen,
+                    desktop: siderCollapsed,
+                }
+            }}
             padding="md"
+            layout="alt"
           >
 
             <HeaderToRender />
@@ -40,6 +50,19 @@ export const ThemedLayoutV2: React.FC<RefineThemedLayoutV2Props> = ({
 
             {OffLayoutArea && <OffLayoutArea />}
           </AppShell>
+    )
+};
+
+
+export const ThemedLayoutV2: React.FC<RefineThemedLayoutV2Props> = ({
+    initialSiderCollapsed,
+    ...restProps
+}) => {
+  return (
+    <ThemedLayoutContextProvider
+        initialSiderCollapsed={initialSiderCollapsed}
+        >
+            <ThemedLayoutV2WithoutContext {...restProps} />
         </ThemedLayoutContextProvider>
       )
 };

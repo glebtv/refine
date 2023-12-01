@@ -77,7 +77,7 @@ export const List: React.FC<ListProps> = (props) => {
 
     return (
         <Card p="md" {...wrapperProps}>
-            <Group justify="apart" align="center" {...headerProps}>
+            <Group justify="space-between" align="center" {...headerProps}>
                 <Stack gap="xs">
                     {breadcrumbComponent}
                     {title ?? (

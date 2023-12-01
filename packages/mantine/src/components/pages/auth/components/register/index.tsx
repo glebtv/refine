@@ -190,7 +190,7 @@ export const RegisterPage: React.FC<RegisterProps> = ({
                 </FormProvider>
             )}
             {loginLink ?? (
-                <Group mt="md" position="center">
+                <Group mt="md" justify="center">
                     <Text size="xs">
                         {translate(
                             "pages.register.buttons.haveAccount",

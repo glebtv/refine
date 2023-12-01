@@ -203,10 +203,10 @@ export const Edit: React.FC<EditProps> = (props) => {
     return (
         <Card p="md" {...wrapperProps}>
             <LoadingOverlay visible={loadingOverlayVisible} />
-            <Group justify="apart" {...headerProps}>
+            <Group justify="space-between" {...headerProps}>
                 <Stack gap="xs">
                     {breadcrumbComponent}
-                    <Group>
+                    <Group gap="xs">
                         {buttonBack}
                         {title ?? (
                             <Title

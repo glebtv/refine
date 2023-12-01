@@ -187,7 +187,7 @@ export const Show: React.FC<ShowProps> = (props) => {
     return (
         <Card p="md" {...wrapperProps}>
             <LoadingOverlay visible={loadingOverlayVisible} />
-            <Group justify="apart" align="center" {...headerProps}>
+            <Group justify="space-between" align="center" {...headerProps}>
                 <Stack gap="xs">
                     {breadcrumbComponent}
                     <Group gap="xs">

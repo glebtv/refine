@@ -30,6 +30,7 @@ import { ThemedTitleV2 as DefaultTitle } from "@components";
 import { useThemedLayoutContext } from "@hooks";
 
 import { RefineThemedLayoutV2SiderProps } from "../types";
+import { useColorScheme } from "@mantine/hooks";
 
 const defaultNavIcon = <IconList size={20} />;
 
@@ -59,6 +60,23 @@ export const ThemedSiderV2: React.FC<RefineThemedLayoutV2SiderProps> = ({
     });
 
     const RenderToTitle = TitleFromProps ?? TitleFromContext ?? DefaultTitle;
+
+    const colorScheme = useColorScheme();
+
+    const borderColor =
+        colorScheme === "dark"
+            ? 'var(--mantine-color-dark-6)'
+            : 'var(--mantine-color-gray-2)';
+
+    const commonNavLinkStyles =
+        {
+            display: "flex",
+            marginTop: "12px",
+            justifyContent:
+                siderCollapsed && !mobileSiderOpen
+                    ? "center"
+                    : "flex-start",
+        };
 
     const commonTooltipProps: Partial<TooltipProps> = {
         disabled: !siderCollapsed || mobileSiderOpen,
@@ -116,7 +134,7 @@ export const ThemedSiderV2: React.FC<RefineThemedLayoutV2SiderProps> = ({
                                     ? "12px"
                                     : "18px"
                             }
-                            style={disablePointerStyle}
+                            style={[commonNavLinkStyles, disablePointerStyle]}
                             {...additionalLinkProps}
                         >
                             {isParent && renderTreeView(children, selectedKey)}
@@ -146,6 +164,7 @@ export const ThemedSiderV2: React.FC<RefineThemedLayoutV2SiderProps> = ({
                     component={Link as any}
                     to="/"
                     active={selectedKey === "/"}
+                    style={commonNavLinkStyles}
                 />
             </Tooltip>
         </CanAccess>
@@ -181,6 +200,7 @@ export const ThemedSiderV2: React.FC<RefineThemedLayoutV2SiderProps> = ({
                 leftSection={<IconPower size={20} />}
                 pl={siderCollapsed || mobileSiderOpen ? "12px" : "18px"}
                 onClick={handleLogout}
+                style={commonNavLinkStyles}
             />
         </Tooltip>
     );
@@ -210,9 +230,9 @@ export const ThemedSiderV2: React.FC<RefineThemedLayoutV2SiderProps> = ({
                 pl={siderCollapsed ? 0 : "16px"}
                 align="center"
                 justify={siderCollapsed ? "center" : "flex-start"}
-                // sx={{
-                //     borderBottom: `1px solid ${borderColor}`,
-                // }}
+                style={{
+                    borderBottom: `1px solid ${borderColor}`,
+                }}
             >
                 <RenderToTitle collapsed={siderCollapsed} />
             </Flex>
