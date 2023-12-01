@@ -103,7 +103,7 @@ export const ThemedSiderV2: React.FC<RefineThemedLayoutV2SiderProps> = ({
                                     ? null
                                     : label
                             }
-                            icon={icon ?? defaultNavIcon}
+                            leftSection={icon ?? defaultNavIcon}
                             active={isSelected}
                             childrenOffset={
                                 siderCollapsed && !mobileSiderOpen ? 0 : 12
@@ -142,7 +142,7 @@ export const ThemedSiderV2: React.FC<RefineThemedLayoutV2SiderProps> = ({
                             ? null
                             : t("dashboard.title", "Dashboard")
                     }
-                    icon={<IconDashboard size={20} />}
+                    leftSection={<IconDashboard size={20} />}
                     component={Link as any}
                     to="/"
                     active={selectedKey === "/"}
@@ -178,7 +178,7 @@ export const ThemedSiderV2: React.FC<RefineThemedLayoutV2SiderProps> = ({
                         ? null
                         : t("buttons.logout", "Logout")
                 }
-                // icon={<IconPower size={20} />}
+                leftSection={<IconPower size={20} />}
                 pl={siderCollapsed || mobileSiderOpen ? "12px" : "18px"}
                 onClick={handleLogout}
             />
