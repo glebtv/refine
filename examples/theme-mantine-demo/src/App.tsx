@@ -1,3 +1,6 @@
+import '@mantine/core/styles.css';
+import '@mantine/notifications/styles.css';
+
 import { useState } from "react";
 import { Authenticated, GitHubBanner, Refine } from "@refinedev/core";
 import {
@@ -7,12 +10,9 @@ import {
     AuthPage,
     RefineThemes,
 } from "@refinedev/mantine";
-import { NotificationsProvider } from "@mantine/notifications";
+import { Notifications } from "@mantine/notifications";
 import {
     MantineProvider,
-    Global,
-    ColorScheme,
-    ColorSchemeProvider,
 } from "@mantine/core";
 import dataProvider from "@refinedev/simple-rest";
 import routerProvider, {
@@ -30,34 +30,19 @@ import ThemeSettings from "./components/theme-settings";
 import DashboardPage from "./pages/dashboard";
 
 const App: React.FC = () => {
-    const [colorScheme, setColorScheme] = useState<ColorScheme>("dark");
     const [customTheme, setCustomTheme] = useState(RefineThemes.Blue);
-
-    const toggleColorScheme = (value?: ColorScheme) =>
-        setColorScheme(value || (colorScheme === "dark" ? "light" : "dark"));
 
     return (
         <BrowserRouter>
             <GitHubBanner />
-            <ColorSchemeProvider
-                colorScheme={colorScheme}
-                toggleColorScheme={toggleColorScheme}
-            >
                 <MantineProvider
                     theme={{
-                        colorScheme: colorScheme,
                         ...customTheme,
                     }}
-                    withNormalizeCSS
-                    withGlobalStyles
                 >
-                    <Global
-                        styles={{ body: { WebkitFontSmoothing: "auto" } }}
-                    />
                     <ThemeSettings
                         onThemeClick={(theme) => setCustomTheme(theme)}
                     />
-                    <NotificationsProvider position="top-right">
                         <Refine
                             routerProvider={routerProvider}
                             authProvider={authProvider}
@@ -200,12 +185,11 @@ const App: React.FC = () => {
                                     />
                                 </Route>
                             </Routes>
+                            <Notifications />
                             <UnsavedChangesNotifier />
                             <DocumentTitleHandler />
                         </Refine>
-                    </NotificationsProvider>
                 </MantineProvider>
-            </ColorSchemeProvider>
         </BrowserRouter>
     );
 };

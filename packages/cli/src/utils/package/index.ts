@@ -142,6 +142,11 @@ export const pmCommands = {
         installDev: ["add", "-D"],
         outdatedJson: ["outdated", "--format", "json"],
     },
+    bun: {
+        install: ["add"],
+        installDev: ["add", "-D"],
+        outdatedJson: ["outdated"],
+    },
 };
 
 export const getPreferedPM = async () => {
