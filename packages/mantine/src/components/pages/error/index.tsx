@@ -18,7 +18,6 @@ import {
     Space,
 } from "@mantine/core";
 import { IconInfoCircle } from "@tabler/icons";
-import { useColorScheme } from "@mantine/hooks";
 
 export const ErrorComponent: React.FC<RefineErrorPageProps> = () => {
     const [errorMessage, setErrorMessage] = useState<string>();
@@ -26,8 +25,6 @@ export const ErrorComponent: React.FC<RefineErrorPageProps> = () => {
     const { push } = useNavigation();
     const go = useGo();
     const routerType = useRouterType();
-
-    const colorScheme = useColorScheme();
 
     const { resource, action } = useResource();
 
@@ -48,7 +45,7 @@ export const ErrorComponent: React.FC<RefineErrorPageProps> = () => {
 
     return (
         <Box
-            style={{
+            sx={{
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
@@ -59,26 +56,29 @@ export const ErrorComponent: React.FC<RefineErrorPageProps> = () => {
             }}
         >
             <Title
-                style={(theme) => ({
+                sx={(theme) => ({
                     textAlign: "center",
                     fontWeight: 900,
                     fontSize: 220,
                     lineHeight: 1,
                     color:
-                        colorScheme === "dark" ? theme.colors.dark[4] : theme.colors.gray[2],
-                    /* [theme.fn.smallerThan("sm")]: {
+                        theme.colorScheme === "dark"
+                            ? theme.colors.dark[4]
+                            : theme.colors.gray[2],
+
+                    [theme.fn.smallerThan("sm")]: {
                         fontSize: 120,
-                    }, */
+                    },
                 })}
             >
                 404
             </Title>
-            <Group gap={4} justify="center">
+            <Group spacing={4} align="center" sx={{ justifyContent: "center" }}>
                 <Text
                     color="dimmed"
                     size="lg"
-                    ta="center"
-                    maw={500}
+                    align="center"
+                    sx={{ maxWidth: 500 }}
                 >
                     {translate(
                         "pages.error.404",

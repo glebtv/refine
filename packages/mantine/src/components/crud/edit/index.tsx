@@ -162,7 +162,7 @@ export const Edit: React.FC<EditProps> = (props) => {
     );
 
     const buttonBack =
-        (goBackFromProps === false || goBackFromProps === null) ? null : (
+        goBackFromProps === (false || null) ? null : (
             <ActionIcon
                 onClick={
                     action !== "list" && typeof action !== "undefined"
@@ -203,14 +203,15 @@ export const Edit: React.FC<EditProps> = (props) => {
     return (
         <Card p="md" {...wrapperProps}>
             <LoadingOverlay visible={loadingOverlayVisible} />
-            <Group justify="space-between" {...headerProps}>
-                <Stack gap="xs">
+            <Group position="apart" {...headerProps}>
+                <Stack spacing="xs">
                     {breadcrumbComponent}
-                    <Group gap="xs">
+                    <Group spacing="xs">
                         {buttonBack}
                         {title ?? (
                             <Title
                                 order={3}
+                                transform="capitalize"
                                 className={RefinePageHeaderClassNames.Title}
                             >
                                 {translate(
@@ -227,14 +228,14 @@ export const Edit: React.FC<EditProps> = (props) => {
                         )}
                     </Group>
                 </Stack>
-                <Group gap="xs" {...headerButtonProps}>
+                <Group spacing="xs" {...headerButtonProps}>
                     {headerButtons}
                 </Group>
             </Group>
             <Box pt="sm" {...contentProps}>
                 {children}
             </Box>
-            <Group justify="right" gap="xs" mt="md" {...footerButtonProps}>
+            <Group position="right" spacing="xs" mt="md" {...footerButtonProps}>
                 {footerButtons}
             </Group>
         </Card>

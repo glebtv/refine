@@ -70,7 +70,7 @@ const Message = ({
     const translate = useTranslate();
 
     return (
-        <Text size="sm" display="flex" ta="center" mr="2" color="gray">
+        <Text size="sm" display="flex" align="center" mr="2" color="gray">
             {translate(key, defaultMessage)}
             <span
                 style={{ position: "relative", top: "3px", marginLeft: "3px" }}

@@ -37,8 +37,6 @@ export const PostEdit: React.FC = () => {
         defaultValue: queryResult?.data?.data.category.id,
     });
 
-    console.log(selectProps)
-
     return (
         <Edit saveButtonProps={saveButtonProps}>
             <form>
@@ -66,7 +64,7 @@ export const PostEdit: React.FC = () => {
                     {...getInputProps("category.id")}
                     {...selectProps}
                 />
-                <Text mt={8} fw={500} size="sm" color="#212529">
+                <Text mt={8} weight={500} size="sm" color="#212529">
                     Content
                 </Text>
                 <MDEditor
@@ -74,7 +72,7 @@ export const PostEdit: React.FC = () => {
                     {...getInputProps("content")}
                 />
                 {errors.content && (
-                    <Text mt={2} fw={500} size="xs" color="red">
+                    <Text mt={2} weight={500} size="xs" color="red">
                         {errors.content}
                     </Text>
                 )}

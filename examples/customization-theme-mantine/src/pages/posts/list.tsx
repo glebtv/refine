@@ -93,7 +93,7 @@ export const PostList: React.FC = () => {
                 enableSorting: false,
                 cell: function render({ getValue }) {
                     return (
-                        <Group gap="xs" wrap="nowrap">
+                        <Group spacing="xs" noWrap>
                             <ShowButton
                                 hideText
                                 recordItemId={getValue() as number}
@@ -156,7 +156,7 @@ export const PostList: React.FC = () => {
                                     return (
                                         <th key={header.id}>
                                             {!header.isPlaceholder && (
-                                                <Group gap="xs" wrap="nowrap">
+                                                <Group spacing="xs" noWrap>
                                                     <Box>
                                                         {flexRender(
                                                             header.column
@@ -165,7 +165,7 @@ export const PostList: React.FC = () => {
                                                             header.getContext(),
                                                         )}
                                                     </Box>
-                                                    <Group gap="xs" wrap="nowrap">
+                                                    <Group spacing="xs" noWrap>
                                                         <ColumnSorter
                                                             column={
                                                                 header.column

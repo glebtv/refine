@@ -25,15 +25,18 @@ export const ExportButton: React.FC<ExportButtonProps> = ({
 }) => {
     const translate = useTranslate();
 
-    const { variant, styles, vars, ...commonProps } = rest;
+    const { variant, styles, ...commonProps } = rest;
 
     return hideText ? (
         <ActionIcon
-            size="md"
-            variant={mapButtonVariantToActionIconVariant(variant, "default")}
+            {...(variant
+                ? {
+                      variant: mapButtonVariantToActionIconVariant(variant),
+                  }
+                : { variant: "default" })}
             loading={loading}
             data-testid={RefineButtonTestIds.ExportButton}
-            // className={RefineButtonClassNames.ExportButton}
+            className={RefineButtonClassNames.ExportButton}
             {...commonProps}
         >
             <IconFileExport size={18} {...svgIconProps} />
@@ -42,10 +45,9 @@ export const ExportButton: React.FC<ExportButtonProps> = ({
         <Button
             variant="default"
             loading={loading}
-            leftSection={<IconFileExport size={18} {...svgIconProps} />}
+            leftIcon={<IconFileExport size={18} {...svgIconProps} />}
             data-testid={RefineButtonTestIds.ExportButton}
-            vars={vars}
-            // className={RefineButtonClassNames.ExportButton}
+            className={RefineButtonClassNames.ExportButton}
             {...rest}
         >
             {children ?? translate("buttons.export", "Export")}

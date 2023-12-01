@@ -98,12 +98,5 @@ export default defineConfig({
             },
         }),
     ],
-    esbuildOptions(options) {
-        options.keepNames = true;
-        options.external = [
-            'react',
-            '@refinedev/devtools-server',
-        ];
-    },
     onSuccess: "tsc --project tsconfig.declarations.json",
 });

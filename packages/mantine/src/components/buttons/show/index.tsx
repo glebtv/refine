@@ -84,7 +84,7 @@ export const ShowButton: React.FC<ShowButtonProps> = ({
             ? generateShowUrl(resource, recordItemId! ?? id!, meta)
             : "";
 
-    const { variant, styles, vars, ...commonProps } = rest;
+    const { variant, styles, ...commonProps } = rest;
 
     if (accessControlEnabled && hideIfUnauthorized && !data?.can) {
         return null;
@@ -108,7 +108,12 @@ export const ShowButton: React.FC<ShowButtonProps> = ({
         >
             {hideText ? (
                 <ActionIcon
-                    variant={mapButtonVariantToActionIconVariant(variant, "default")}
+                    {...(variant
+                        ? {
+                              variant:
+                                  mapButtonVariantToActionIconVariant(variant),
+                          }
+                        : { variant: "default" })}
                     disabled={data?.can === false}
                     title={disabledTitle()}
                     data-testid={RefineButtonTestIds.ShowButton}
@@ -121,11 +126,10 @@ export const ShowButton: React.FC<ShowButtonProps> = ({
                 <Button
                     variant="default"
                     disabled={data?.can === false}
-                    leftSection={<IconEye size={18} {...svgIconProps} />}
+                    leftIcon={<IconEye size={18} {...svgIconProps} />}
                     title={disabledTitle()}
                     data-testid={RefineButtonTestIds.ShowButton}
                     className={RefineButtonClassNames.ShowButton}
-                    vars={vars}
                     {...rest}
                 >
                     {children ?? translate("buttons.show", "Show")}

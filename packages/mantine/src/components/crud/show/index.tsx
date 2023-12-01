@@ -187,14 +187,15 @@ export const Show: React.FC<ShowProps> = (props) => {
     return (
         <Card p="md" {...wrapperProps}>
             <LoadingOverlay visible={loadingOverlayVisible} />
-            <Group justify="space-between" align="center" {...headerProps}>
-                <Stack gap="xs">
+            <Group position="apart" align="center" {...headerProps}>
+                <Stack spacing="xs">
                     {breadcrumbComponent}
-                    <Group gap="xs">
+                    <Group spacing="xs">
                         {buttonBack}
                         {title ?? (
                             <Title
                                 order={3}
+                                transform="capitalize"
                                 className={RefinePageHeaderClassNames.Title}
                             >
                                 {translate(
@@ -211,14 +212,14 @@ export const Show: React.FC<ShowProps> = (props) => {
                         )}
                     </Group>
                 </Stack>
-                <Group {...headerButtonProps}>
+                <Group spacing="xs" {...headerButtonProps}>
                     {headerButtons}
                 </Group>
             </Group>
             <Box pt="sm" {...contentProps}>
                 {children}
             </Box>
-            <Group mt="md" {...footerButtonProps}>
+            <Group position="right" spacing="xs" mt="md" {...footerButtonProps}>
                 {footerButtons}
             </Group>
         </Card>

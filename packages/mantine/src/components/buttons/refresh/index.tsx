@@ -62,7 +62,7 @@ export const RefreshButton: React.FC<RefreshButtonProps> = ({
         });
     };
 
-    const { variant, styles: _styles, vars, ...commonProps } = rest;
+    const { variant, styles: _styles, ...commonProps } = rest;
 
     return hideText ? (
         <ActionIcon
@@ -72,7 +72,11 @@ export const RefreshButton: React.FC<RefreshButtonProps> = ({
             loading={isInvalidating}
             data-testid={RefineButtonTestIds.RefreshButton}
             className={RefineButtonClassNames.RefreshButton}
-            variant={mapButtonVariantToActionIconVariant(variant, "default")}
+            {...(variant
+                ? {
+                      variant: mapButtonVariantToActionIconVariant(variant),
+                  }
+                : { variant: "default" })}
             {...commonProps}
         >
             <IconRefresh size={18} {...svgIconProps} />
@@ -80,14 +84,13 @@ export const RefreshButton: React.FC<RefreshButtonProps> = ({
     ) : (
         <Button
             variant="default"
-            leftSection={<IconRefresh size={18} {...svgIconProps} />}
+            leftIcon={<IconRefresh size={18} {...svgIconProps} />}
             loading={isInvalidating}
             onClick={(e: React.PointerEvent<HTMLButtonElement>) => {
                 onClick ? onClick(e) : handleInvalidate();
             }}
             data-testid={RefineButtonTestIds.RefreshButton}
             className={RefineButtonClassNames.RefreshButton}
-            vars={vars}
             {...rest}
         >
             {children ?? translate("buttons.refresh", "Refresh")}

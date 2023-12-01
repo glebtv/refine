@@ -26,14 +26,19 @@ export const ImportButton: React.FC<ImportButtonProps> = ({
 }) => {
     const translate = useTranslate();
 
-    const { variant, styles, vars, ...commonProps } = rest;
+    const { variant, styles, ...commonProps } = rest;
 
     return (
         <label htmlFor="contained-button-file">
             <input {...inputProps} id="contained-button-file" multiple hidden />
             {hideText ? (
                 <ActionIcon
-                    variant={mapButtonVariantToActionIconVariant(variant, "default")}
+                    {...(variant
+                        ? {
+                              variant:
+                                  mapButtonVariantToActionIconVariant(variant),
+                          }
+                        : { variant: "default" })}
                     component="span"
                     loading={loading}
                     data-testid={RefineButtonTestIds.ImportButton}
@@ -46,11 +51,10 @@ export const ImportButton: React.FC<ImportButtonProps> = ({
                 <Button
                     variant="default"
                     component="span"
-                    leftSection={<IconFileImport size={18} {...svgIconProps} />}
+                    leftIcon={<IconFileImport size={18} {...svgIconProps} />}
                     loading={loading}
                     data-testid={RefineButtonTestIds.ImportButton}
                     className={RefineButtonClassNames.ImportButton}
-                    vars={vars}
                     {...rest}
                 >
                     {children ?? translate("buttons.import", "Import")}

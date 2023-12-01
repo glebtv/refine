@@ -1,4 +1,4 @@
-import { ButtonProps, ClassNames } from "@mantine/core";
+import { ButtonProps } from "@mantine/core";
 import { UseImportInputPropsType } from "@refinedev/core";
 import {
     RefineCloneButtonProps,
@@ -14,40 +14,36 @@ import {
 } from "@refinedev/ui-types";
 import { TablerIconProps } from "@tabler/icons";
 
-export type MantiteButtonProps = Omit<ButtonProps, "classNames"> & {
-  size?: string
-}
-
 export type ShowButtonProps = RefineShowButtonProps<
-    MantiteButtonProps,
+    ButtonProps,
     {
         svgIconProps?: TablerIconProps;
     }
 >;
 
 export type SaveButtonProps = RefineSaveButtonProps<
-    MantiteButtonProps,
+    ButtonProps,
     {
         svgIconProps?: TablerIconProps;
     }
 >;
 
 export type RefreshButtonProps = RefineRefreshButtonProps<
-    MantiteButtonProps,
+    ButtonProps,
     {
         svgIconProps?: TablerIconProps;
     }
 >;
 
 export type ListButtonProps = RefineListButtonProps<
-    MantiteButtonProps,
+    ButtonProps,
     {
         svgIconProps?: TablerIconProps;
     }
 >;
 
 export type ImportButtonProps = RefineImportButtonProps<
-    MantiteButtonProps,
+    ButtonProps,
     {
         inputProps: UseImportInputPropsType;
         svgIconProps?: TablerIconProps;
@@ -55,35 +51,35 @@ export type ImportButtonProps = RefineImportButtonProps<
 >;
 
 export type ExportButtonProps = RefineExportButtonProps<
-    MantiteButtonProps,
+    ButtonProps,
     {
         svgIconProps?: TablerIconProps;
     }
 >;
 
 export type EditButtonProps = RefineEditButtonProps<
-    MantiteButtonProps,
+    ButtonProps,
     {
         svgIconProps?: TablerIconProps;
     }
 >;
 
 export type DeleteButtonProps = RefineDeleteButtonProps<
-    MantiteButtonProps,
+    ButtonProps,
     {
         svgIconProps?: TablerIconProps;
     }
 >;
 
 export type CreateButtonProps = RefineCreateButtonProps<
-    MantiteButtonProps,
+    ButtonProps,
     {
         svgIconProps?: TablerIconProps;
     }
 >;
 
 export type CloneButtonProps = RefineCloneButtonProps<
-    MantiteButtonProps,
+    ButtonProps,
     {
         svgIconProps?: TablerIconProps;
     }

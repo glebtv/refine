@@ -1,68 +1,49 @@
 import React from "react";
-import { AppShell } from "@mantine/core";
+import { Box } from "@mantine/core";
 
 import { RefineThemedLayoutV2Props } from "./types";
 import { ThemedSiderV2 as DefaultSider } from "./sider";
 import { ThemedHeaderV2 as DefaultHeader } from "./header";
 import { ThemedLayoutContextProvider } from "../../contexts";
 
-import { useThemedLayoutContext } from "@hooks";
-
-const ThemedLayoutV2WithoutContext: React.FC<RefineThemedLayoutV2Props> = ({
+export const ThemedLayoutV2: React.FC<RefineThemedLayoutV2Props> = ({
     Sider,
     Header,
     Title,
     Footer,
     OffLayoutArea,
+    initialSiderCollapsed,
     children,
 }) => {
     const SiderToRender = Sider ?? DefaultSider;
     const HeaderToRender = Header ?? DefaultHeader;
 
-    const { siderCollapsed, mobileSiderOpen, setMobileSiderOpen } = useThemedLayoutContext();
-
     return (
-          <AppShell
-            header={{
-                height: 50
-            }}
-            navbar={{
-                width: siderCollapsed ? 60 : 200,
-                breakpoint: 'sm',
-                collapsed: {
-                    mobile: !mobileSiderOpen,
-                    desktop: siderCollapsed,
-                }
-            }}
-            padding="md"
-            layout="alt"
-          >
-
-            <HeaderToRender />
-
-            <SiderToRender Title={Title} />
-
-            <AppShell.Main>
-              {children}
-
-              {Footer && <Footer />}
-            </AppShell.Main>
-
-            {OffLayoutArea && <OffLayoutArea />}
-          </AppShell>
-    )
-};
-
-
-export const ThemedLayoutV2: React.FC<RefineThemedLayoutV2Props> = ({
-    initialSiderCollapsed,
-    ...restProps
-}) => {
-  return (
-    <ThemedLayoutContextProvider
-        initialSiderCollapsed={initialSiderCollapsed}
+        <ThemedLayoutContextProvider
+            initialSiderCollapsed={initialSiderCollapsed}
         >
-            <ThemedLayoutV2WithoutContext {...restProps} />
+            <Box sx={{ display: "flex" }}>
+                <SiderToRender Title={Title} />
+                <Box
+                    sx={{
+                        display: "flex",
+                        flexDirection: "column",
+                        flex: 1,
+                    }}
+                >
+                    <HeaderToRender />
+                    <Box
+                        component="main"
+                        sx={(theme) => ({
+                            padding: theme.spacing.sm,
+                        })}
+                    >
+                        {children}
+                    </Box>
+                    {Footer && <Footer />}
+                </Box>
+                {OffLayoutArea && <OffLayoutArea />}
+            </Box>
         </ThemedLayoutContextProvider>
-      )
+    );
 };

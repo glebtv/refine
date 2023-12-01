@@ -75,7 +75,7 @@ export const CreateButton: React.FC<CreateButtonProps> = ({
 
     const createUrl = resource ? generateCreateUrl(resource, meta) : "";
 
-    const { variant, styles, vars, ...commonProps } = rest;
+    const { variant, styles, ...commonProps } = rest;
 
     if (accessControlEnabled && hideIfUnauthorized && !data?.can) {
         return null;
@@ -102,8 +102,12 @@ export const CreateButton: React.FC<CreateButtonProps> = ({
                     title={disabledTitle()}
                     disabled={data?.can === false}
                     color="primary"
-                    variant={mapButtonVariantToActionIconVariant(variant, "default")}
-
+                    {...(variant
+                        ? {
+                              variant:
+                                  mapButtonVariantToActionIconVariant(variant),
+                          }
+                        : { variant: "filled" })}
                     data-testid={RefineButtonTestIds.CreateButton}
                     className={RefineButtonClassNames.CreateButton}
                     {...commonProps}
@@ -113,9 +117,8 @@ export const CreateButton: React.FC<CreateButtonProps> = ({
             ) : (
                 <Button
                     disabled={data?.can === false}
-                    leftSection={<IconSquarePlus size={18} {...svgIconProps} />}
+                    leftIcon={<IconSquarePlus size={18} {...svgIconProps} />}
                     title={disabledTitle()}
-                    vars={vars}
                     data-testid={RefineButtonTestIds.CreateButton}
                     className={RefineButtonClassNames.CreateButton}
                     color="primary"

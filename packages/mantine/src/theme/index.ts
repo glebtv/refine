@@ -46,6 +46,40 @@ const commonThemeProperties: Partial<MantineThemeOverride> = {
             '"Segoe UI Symbol"',
         ].join(","),
     },
+    components: {
+        Table: {
+            styles: (theme) =>
+                theme.colorScheme === "light"
+                    ? {
+                          root: {
+                              "thead>tr>th": {
+                                  backgroundColor: "#fafafa",
+                                  padding: "16px 4px",
+                              },
+                              "thead>tr>th:first-of-type": {
+                                  borderTopLeftRadius: theme.defaultRadius,
+                              },
+                              "thead>tr>th:last-of-type": {
+                                  borderTopRightRadius: theme.defaultRadius,
+                              },
+                              "tbody>tr>td": {
+                                  borderBottom: "1px solid #f0f0f0",
+                              },
+                          },
+                      }
+                    : { root: {} },
+        },
+    },
+};
+
+export const LightTheme: Partial<MantineThemeOverride> = {
+    colorScheme: "light",
+    ...commonThemeProperties,
+};
+
+export const DarkTheme: Partial<MantineThemeOverride> = {
+    colorScheme: "dark",
+    ...commonThemeProperties,
 };
 
 const refineColors = {
@@ -154,6 +188,15 @@ export const RefineThemes = Object.keys(refineColors).reduce((acc, key) => {
     return {
         ...acc,
         [themeName]: {
+            globalStyles: (theme: MantineTheme) => ({
+                body: {
+                    backgroundColor:
+                        theme.colorScheme === "dark"
+                            ? theme.colors.dark[8]
+                            : theme.colors.gray[0],
+                },
+            }),
+
             colors: {
                 brand: refineColors[themeName].colors,
             },

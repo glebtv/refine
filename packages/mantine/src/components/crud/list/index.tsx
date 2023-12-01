@@ -77,12 +77,13 @@ export const List: React.FC<ListProps> = (props) => {
 
     return (
         <Card p="md" {...wrapperProps}>
-            <Group justify="space-between" align="center" {...headerProps}>
-                <Stack gap="xs">
+            <Group position="apart" align="center" {...headerProps}>
+                <Stack spacing="xs">
                     {breadcrumbComponent}
                     {title ?? (
                         <Title
                             order={3}
+                            transform="capitalize"
                             className={RefinePageHeaderClassNames.Title}
                         >
                             {translate(
@@ -98,7 +99,7 @@ export const List: React.FC<ListProps> = (props) => {
                         </Title>
                     )}
                 </Stack>
-                <Group gap="xs" {...headerButtonProps}>
+                <Group spacing="xs" {...headerButtonProps}>
                     {headerButtons}
                 </Group>
             </Group>

@@ -1,59 +1,23 @@
 import React from "react";
-
-import { ThemedLayoutContext } from "@contexts";
-
-import {
-    useGetIdentity,
-    useActiveAuthProvider,
-    pickNotDeprecated,
-} from "@refinedev/core";
-import {
-    Avatar,
-    Flex,
-    AppShell,
-    Burger,
-    Title,
-    useMantineTheme,
-} from "@mantine/core";
+import { useGetIdentity, useActiveAuthProvider } from "@refinedev/core";
+import { Avatar, Group, Header as MantineHeader, Title } from "@mantine/core";
 
 import { RefineLayoutHeaderProps } from "../types";
 
-import { useThemedLayoutContext } from "@hooks";
-
-export const Header: React.FC<RefineLayoutHeaderProps> = ({}) => {
-    const theme = useMantineTheme();
-
-    const { siderCollapsed, mobileSiderOpen, setMobileSiderOpen } =
-        useThemedLayoutContext();
-
+export const Header: React.FC<RefineLayoutHeaderProps> = () => {
     const authProvider = useActiveAuthProvider();
     const { data: user } = useGetIdentity({
         v3LegacyAuthProviderCompatible: Boolean(authProvider?.isLegacy),
     });
 
+    const shouldRenderHeader = user && (user.name || user.avatar);
 
-    return (
-        <AppShell.Header>
-            <Burger
-                opened={mobileSiderOpen}
-                onClick={() => setMobileSiderOpen(!mobileSiderOpen)}
-                hiddenFrom="sm"
-                size="sm"
-            />
-            <Flex align="center" gap="sm">
-                {user?.name && (
-                    <Title order={6} data-testid="header-user-name">
-                        {user?.name}
-                    </Title>
-                )}
-                {user?.avatar && (
-                    <Avatar
-                        src={user?.avatar}
-                        alt={user?.name}
-                        radius="xl"
-                    />
-                )}
-            </Flex>
-        </AppShell.Header>
-    );
+    return shouldRenderHeader ? (
+        <MantineHeader height={50} py={6} px="sm">
+            <Group position="right">
+                <Title order={6}>{user?.name}</Title>
+                <Avatar src={user?.avatar} alt={user?.name} radius="xl" />
+            </Group>
+        </MantineHeader>
+    ) : null;
 };

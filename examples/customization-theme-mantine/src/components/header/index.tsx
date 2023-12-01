@@ -1,34 +1,37 @@
 import {
     ActionIcon,
-    Burger,
     Flex,
-    Group,
+    Header as MantineHeader,
+    useMantineColorScheme,
 } from "@mantine/core";
-import { ColorSchemeControl } from "@mantine/ds";
-
-import '@mantine/ds/styles.css';
-import { useThemedLayoutContext } from "@refinedev/mantine";
-
-import classes from './header.module.css';
+import { IconSun, IconMoonStars } from "@tabler/icons";
+import { HamburgerMenu } from "@refinedev/mantine";
 
 export const Header: React.FC = () => {
-    const { mobileSiderOpen, setMobileSiderOpen } = useThemedLayoutContext();
+    const { colorScheme, toggleColorScheme } = useMantineColorScheme();
+    const dark = colorScheme === "dark";
 
     return (
-        <Group
-            align="center"
-            justify="space-between"
-            wrap="nowrap"
-            className={classes.header}
-            hiddenFrom="sm"
+        <MantineHeader
+            height={50}
+            p="xs"
+            sx={{
+                position: `sticky`,
+                top: 0,
+                zIndex: 1,
+            }}
         >
-
-            <Burger
-                opened={mobileSiderOpen}
-                onClick={() => setMobileSiderOpen(!mobileSiderOpen)}
-                size="sm"
-            />
-            <ColorSchemeControl />
-        </Group>
+            <Flex justify="space-between" align="center">
+                <HamburgerMenu />
+                <ActionIcon
+                    variant="outline"
+                    color={dark ? "yellow" : "primary"}
+                    onClick={() => toggleColorScheme()}
+                    title="Toggle color scheme"
+                >
+                    {dark ? <IconSun size={18} /> : <IconMoonStars size={18} />}
+                </ActionIcon>
+            </Flex>
+        </MantineHeader>
     );
 };

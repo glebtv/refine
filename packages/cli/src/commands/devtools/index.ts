@@ -1,4 +1,4 @@
-// import { server } from "@refinedev/devtools-server";
+import { server } from "@refinedev/devtools-server";
 import { addDevtoolsComponent } from "@transformers/add-devtools-component";
 import {
     getInstalledRefinePackagesFromNodeModules,
@@ -149,7 +149,7 @@ const devtoolsInstaller = async () => {
                         "dev": "${scriptDev} & refine devtools",
                         "refine": "refine"
                     }
-                }
+                }  
         `),
                 ),
                 {
@@ -184,7 +184,7 @@ export const devtoolsRunner = async () => {
         }
     }
 
-    // server();
+    server();
 };
 
 const getRefineCorePackage = async () => {

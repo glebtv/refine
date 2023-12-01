@@ -193,7 +193,7 @@ export const renderer = ({
                 const val = dotAccessor(field.key, "${index}", field.accessor);
 
                 return `
-                <Group gap="xs">
+                <Group spacing="xs">
                     {${accessor(
                         recordName,
                         field.key,
@@ -256,7 +256,7 @@ export const renderer = ({
                 const val = dotAccessor(field.key, "${index}", field.accessor);
 
                 return `
-                <Group gap="xs">
+                <Group spacing="xs">
                     {${accessor(
                         recordName,
                         field.key,
@@ -320,7 +320,7 @@ export const renderer = ({
                 const val = dotAccessor(field.key, "${index}", field.accessor);
 
                 return `
-                <Group gap="xs">
+                <Group spacing="xs">
                     {${accessor(
                         recordName,
                         field.key,
@@ -368,7 +368,7 @@ export const renderer = ({
                 const val = dotAccessor(field.key, "${index}", field.accessor);
 
                 return `
-                <Group gap="xs">
+                <Group spacing="xs">
                     {${accessor(
                         recordName,
                         field.key,

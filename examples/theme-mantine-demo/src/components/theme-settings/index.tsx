@@ -31,7 +31,7 @@ const ThemeSettings: FC<Props> = ({ onThemeClick }) => {
     return (
         <>
             <Box
-                style={{
+                sx={{
                     position: "fixed",
                     bottom: "16px",
                     left: "50%",
@@ -42,14 +42,14 @@ const ThemeSettings: FC<Props> = ({ onThemeClick }) => {
                 <Button onClick={show}>Open Theme settings</Button>
             </Box>
             <Modal onClose={close} opened={visible} title="Theme Settings">
-                <Group align="left" gap="sm">
+                <Group position="left" spacing="sm">
                     {Object.keys(RefineThemes).map((key) => {
                         const themeName = key as ThemeName;
                         const theme = { ...RefineThemes[themeName] };
 
                         return (
                             <Button
-                                size="compact-md"
+                                compact
                                 key={themeName}
                                 color={refineThemeNameToMantineColors(
                                     themeName,

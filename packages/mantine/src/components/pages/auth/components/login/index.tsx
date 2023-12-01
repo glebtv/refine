@@ -17,7 +17,6 @@ import {
     Title,
     Anchor,
     Button,
-    Group,
     Text,
     Divider,
     Stack,
@@ -26,7 +25,7 @@ import {
     useMantineTheme,
 } from "@mantine/core";
 
-import { ThemedTitleV2 } from "@components";
+import { ThemedTitle } from "@components";
 import { FormContext } from "@contexts/form-context";
 import {
     layoutStyles,
@@ -92,7 +91,7 @@ export const LoginPage: React.FC<LoginProps> = ({
     const PageTitle =
         title === false ? null : (
             <div style={pageTitleStyles}>
-                {title ?? <ThemedTitleV2 collapsed={false} />}
+                {title ?? <ThemedTitle collapsed={false} />}
             </div>
         );
 
@@ -100,14 +99,14 @@ export const LoginPage: React.FC<LoginProps> = ({
         if (providers && providers.length > 0) {
             return (
                 <>
-                    <Stack>
+                    <Stack spacing={8}>
                         {providers.map((provider) => {
                             return (
                                 <Button
                                     key={provider.name}
                                     variant="default"
                                     fullWidth
-                                    leftSection={provider.icon}
+                                    leftIcon={provider.icon}
                                     onClick={() =>
                                         login({
                                             providerName: provider.name,
@@ -136,6 +135,7 @@ export const LoginPage: React.FC<LoginProps> = ({
         <Card style={cardStyles} {...(contentProps ?? {})}>
             <Title
                 style={titleStyles}
+                color={theme.colorScheme === "dark" ? "brand.5" : "brand.8"}
             >
                 {translate("pages.login.title", "Sign in to your account")}
             </Title>
@@ -171,16 +171,13 @@ export const LoginPage: React.FC<LoginProps> = ({
                                 "pages.login.fields.password",
                                 "Password",
                             )}
-                            placeholder={translate(
-                                "pages.login.fields.password",
-                                "Password",
-                            )}
+                            placeholder="●●●●●●●●"
                             {...getInputProps("password")}
                         />
                         <Box
                             mt="md"
-                            display="flex"
-                            style={{
+                            sx={{
+                                display: "flex",
                                 alignItems: "center",
                                 justifyContent: "space-between",
                             }}
@@ -223,21 +220,19 @@ export const LoginPage: React.FC<LoginProps> = ({
                 </FormProvider>
             )}
             {registerLink ?? (
-                <Group mt="md" justify="center">
-                    <Text size="xs">
-                        {translate(
-                            "pages.login.buttons.noAccount",
-                            "Don’t have an account?",
-                        )}{" "}
-                        <Anchor
-                            component={ActiveLink as any}
-                            to="/register"
-                            weight={700}
-                        >
-                            {translate("pages.login.signup", "Sign up")}
-                        </Anchor>
-                    </Text>
-                </Group>
+                <Text mt="md" size="xs" align="center">
+                    {translate(
+                        "pages.login.buttons.noAccount",
+                        "Don’t have an account?",
+                    )}{" "}
+                    <Anchor
+                        component={ActiveLink as any}
+                        to="/register"
+                        weight={700}
+                    >
+                        {translate("pages.login.signup", "Sign up")}
+                    </Anchor>
+                </Text>
             )}
         </Card>
     );

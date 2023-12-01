@@ -85,6 +85,7 @@ export const UpdatePasswordPage: React.FC<UpdatePassworProps> = ({
         <Card style={cardStyles} {...(contentProps ?? {})}>
             <Title
                 style={titleStyles}
+                color={theme.colorScheme === "dark" ? "brand.5" : "brand.8"}
             >
                 {translate("pages.updatePassword.title", "Set New Password")}
             </Title>

@@ -111,7 +111,7 @@ export const DeleteButton: React.FC<DeleteButtonProps> = ({
         }
     };
 
-    const { variant, styles, vars, ...commonProps } = rest;
+    const { variant, styles, ...commonProps } = rest;
 
     const { setWarnWhen } = useWarnAboutChange();
 
@@ -142,7 +142,14 @@ export const DeleteButton: React.FC<DeleteButtonProps> = ({
                         }
                         data-testid={RefineButtonTestIds.DeleteButton}
                         className={RefineButtonClassNames.DeleteButton}
-                        variant={mapButtonVariantToActionIconVariant(variant, "outline")}
+                        {...(variant
+                            ? {
+                                  variant:
+                                      mapButtonVariantToActionIconVariant(
+                                          variant,
+                                      ),
+                              }
+                            : { variant: "outline" })}
                         {...commonProps}
                     >
                         <IconTrash size={18} {...svgIconProps} />
@@ -157,10 +164,9 @@ export const DeleteButton: React.FC<DeleteButtonProps> = ({
                             (recordItemId ?? id) === variables?.id && isLoading
                         }
                         title={disabledTitle()}
-                        leftSection={<IconTrash size={18} {...svgIconProps} />}
+                        leftIcon={<IconTrash size={18} {...svgIconProps} />}
                         data-testid={RefineButtonTestIds.DeleteButton}
                         className={RefineButtonClassNames.DeleteButton}
-                        vars={vars}
                         {...rest}
                     >
                         {children ?? translate("buttons.delete", "Delete")}
@@ -168,11 +174,11 @@ export const DeleteButton: React.FC<DeleteButtonProps> = ({
                 )}
             </Popover.Target>
             <Popover.Dropdown py="xs">
-                <Text>
+                <Text size="sm" weight="bold">
                     {confirmTitle ??
                         translate("buttons.confirm", "Are you sure?")}
                 </Text>
-                <Group mt="xs">
+                <Group position="center" noWrap spacing="xs" mt="xs">
                     <Button
                         onClick={() => setOpened(false)}
                         variant="default"

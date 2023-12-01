@@ -24,11 +24,15 @@ export const SaveButton: React.FC<SaveButtonProps> = ({
 }) => {
     const translate = useTranslate();
 
-    const { variant, styles, vars, ...commonProps } = rest;
+    const { variant, styles, ...commonProps } = rest;
 
     return hideText ? (
         <ActionIcon
-            variant={mapButtonVariantToActionIconVariant(variant, "filled")}
+            {...(variant
+                ? {
+                      variant: mapButtonVariantToActionIconVariant(variant),
+                  }
+                : { variant: "filled", color: "primary" })}
             data-testid={RefineButtonTestIds.SaveButton}
             className={RefineButtonClassNames.SaveButton}
             {...commonProps}
@@ -38,10 +42,9 @@ export const SaveButton: React.FC<SaveButtonProps> = ({
     ) : (
         <Button
             variant="filled"
-            leftSection={<IconDeviceFloppy size={18} {...svgIconProps} />}
+            leftIcon={<IconDeviceFloppy size={18} {...svgIconProps} />}
             data-testid={RefineButtonTestIds.SaveButton}
             className={RefineButtonClassNames.SaveButton}
-            vars={vars}
             {...rest}
         >
             {children ?? translate("buttons.save", "Save")}

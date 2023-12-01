@@ -15,7 +15,7 @@ export const RingCountdown: React.FC<RingCountdownProps> = ({
             roundCaps
             sections={[{ value: undoableTimeout * 20, color: "primary" }]}
             label={
-                <Text>
+                <Text weight={700} align="center">
                     {undoableTimeout}
                 </Text>
             }
