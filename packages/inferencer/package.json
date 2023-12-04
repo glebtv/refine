@@ -1,6 +1,7 @@
 {
   "name": "@refinedev/inferencer",
-  "version": "4.5.20",
+  "version": "4.5.22",
+  "description": "refine is a React-based framework for building internal tools, rapidly.",
   "private": false,
   "description": "refine is a React-based framework for building internal tools, rapidly.",
   "repository": {
