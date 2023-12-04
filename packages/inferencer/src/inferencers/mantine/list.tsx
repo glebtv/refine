@@ -852,7 +852,7 @@ export const renderer = ({
                                 <Table.Tr key={headerGroup.id}>
                                     {headerGroup.headers.map((header) => {
                                         return (
-                                            <th key={header.id}>
+                                            <Table.Th key={header.id}>
                                                 {!header.isPlaceholder && (
                                                     flexRender(
                                                         header.column
@@ -861,40 +861,42 @@ export const renderer = ({
                                                         header.getContext(),
                                                     )
                                                 )}
-                                            </th>
+                                            </Table.Th>
                                         );
                                     })}
-                                </tr>
+                                </Table.Tr>
                             ))}
-                        </thead>
+                        </Table.Thead>
                         <Table.Tbody>
                             {getRowModel().rows.map((row) => {
                                 return (
-                                    <tr key={row.id}>
+                                    <Table.Tr key={row.id}>
                                         {row.getVisibleCells().map((cell) => {
                                             return (
-                                                <td key={cell.id}>
+                                                <Table.Td key={cell.id}>
                                                     {flexRender(
                                                         cell.column.columnDef.cell,
                                                         cell.getContext(),
                                                     )}
-                                                </td>
+                                                </Table.Td>
                                             );
                                         })}
-                                    </tr>
+                                    </Table.Tr>
                                 );
                             })}
                         </Table.Tbody>
                     </Table>
                 </ScrollArea>
 
-                <Group align="right">
-                    <Pagination
-                        position="right"
-                        total={pageCount}
-                        page={current}
-                        onChange={setCurrent}
-                    />
+                <Group
+                  justify="right"
+                  mt="md"
+                >
+                  <Pagination
+                      total={pageCount}
+                      value={current}
+                      onChange={setCurrent}
+                  />
                 </Group>
             </List>
         );
