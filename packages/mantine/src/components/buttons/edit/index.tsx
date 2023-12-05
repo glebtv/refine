@@ -120,7 +120,7 @@ export const EditButton: React.FC<EditButtonProps> = ({
                 </ActionIcon>
             ) : (
                 <Button
-                    variant="default"
+                    variant={variant || "filled"}
                     disabled={data?.can === false}
                     leftSection={<IconPencil size={18} {...svgIconProps} />}
                     title={disabledTitle()}

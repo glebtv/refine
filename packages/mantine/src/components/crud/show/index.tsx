@@ -106,7 +106,7 @@ export const Show: React.FC<ShowProps> = (props) => {
     const editButtonProps: EditButtonProps | undefined = isEditButtonVisible
         ? {
               ...(isLoading ? { disabled: true } : {}),
-              color: "primary",
+              color: undefined,
               variant: "filled",
               resource: routerType === "legacy" ? resource?.route : identifier,
               recordItemId: id,

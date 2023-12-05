@@ -31,7 +31,7 @@ const ThemedLayoutV2WithoutContext: React.FC<RefineThemedLayoutV2Props> = ({
                 breakpoint: 'sm',
                 collapsed: {
                     mobile: !mobileSiderOpen,
-                    desktop: siderCollapsed,
+                    desktop: false,
                 }
             }}
             padding="md"

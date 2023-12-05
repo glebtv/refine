@@ -1,6 +1,6 @@
 {
   "name": "@refinedev/mantine",
-  "version": "2.30.3",
+  "version": "2.30.4",
   "description": "refine is a React-based framework for building internal tools, rapidly.",
   "private": false,
   "sideEffects": false,
