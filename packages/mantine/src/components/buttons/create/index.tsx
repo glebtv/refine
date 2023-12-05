@@ -101,7 +101,6 @@ export const CreateButton: React.FC<CreateButtonProps> = ({
                 <ActionIcon
                     title={disabledTitle()}
                     disabled={data?.can === false}
-                    color="primary"
                     variant={mapButtonVariantToActionIconVariant(variant, "default")}
 
                     data-testid={RefineButtonTestIds.CreateButton}
@@ -118,7 +117,6 @@ export const CreateButton: React.FC<CreateButtonProps> = ({
                     vars={vars}
                     data-testid={RefineButtonTestIds.CreateButton}
                     className={RefineButtonClassNames.CreateButton}
-                    color="primary"
                     variant="filled"
                     {...rest}
                 >
