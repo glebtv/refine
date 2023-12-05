@@ -120,7 +120,7 @@ export const ListButton: React.FC<ListButtonProps> = ({
                 </ActionIcon>
             ) : (
                 <Button
-                    variant="default"
+                    variant={variant || "default"}
                     disabled={data?.can === false}
                     leftSection={<IconList size={18} {...svgIconProps} />}
                     title={disabledTitle()}
