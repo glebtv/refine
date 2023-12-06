@@ -75,7 +75,7 @@ export const ColumnFilter: React.FC<ColumnButtonProps> = ({ column }) => {
                 {!!state && (
                     <Stack p="xs" spacing="xs">
                         {renderFilterElement()}
-                        <Group position="right" spacing={6} noWrap>
+                        <Group justify="right" gap={6} wrap="nowrap">
                             <ActionIcon
                                 size="md"
                                 color="gray"

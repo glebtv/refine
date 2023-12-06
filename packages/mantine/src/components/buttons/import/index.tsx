@@ -29,8 +29,8 @@ export const ImportButton: React.FC<ImportButtonProps> = ({
     const { variant, styles, vars, ...commonProps } = rest;
 
     return (
-        <label htmlFor="contained-button-file">
-            <input {...inputProps} id="contained-button-file" multiple hidden />
+        <label style={{display: "flex"}}>
+            <input {...inputProps} multiple hidden />
             {hideText ? (
                 <ActionIcon
                     variant={mapButtonVariantToActionIconVariant(variant, "default")}
@@ -45,7 +45,7 @@ export const ImportButton: React.FC<ImportButtonProps> = ({
             ) : (
                 <Button
                     variant="default"
-                    component="span"
+                    component="div"
                     leftSection={<IconFileImport size={18} {...svgIconProps} />}
                     loading={loading}
                     data-testid={RefineButtonTestIds.ImportButton}

@@ -19,7 +19,7 @@ const ThemedLayoutV2WithoutContext: React.FC<RefineThemedLayoutV2Props> = ({
     const SiderToRender = Sider ?? DefaultSider;
     const HeaderToRender = Header ?? DefaultHeader;
 
-    const { siderCollapsed, mobileSiderOpen, setMobileSiderOpen } = useThemedLayoutContext();
+    const { siderCollapsed, mobileSiderOpen } = useThemedLayoutContext();
 
     return (
           <AppShell
@@ -28,7 +28,7 @@ const ThemedLayoutV2WithoutContext: React.FC<RefineThemedLayoutV2Props> = ({
             }}
             navbar={{
                 width: siderCollapsed ? 60 : 200,
-                breakpoint: 'sm',
+                breakpoint: 'md',
                 collapsed: {
                     mobile: !mobileSiderOpen,
                     desktop: false,
