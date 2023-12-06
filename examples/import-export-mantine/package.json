@@ -8,7 +8,7 @@
     "refine": "refine"
   },
   "dependencies": {
-    "@refinedev/mantine": "^2.29.0",
+    "@refinedev/mantine": "^2.30.0",
     "@refinedev/core": "^4.46.0",
     "@refinedev/cli": "^2.16.20",
     "@refinedev/react-router-v6": "^4.5.4",
@@ -17,10 +17,10 @@
     "@tanstack/react-table": "^8.2.6",
     "@tabler/icons": "^1.119.0",
     "@emotion/react": "^11.8.2",
-    "@mantine/core": "^5.10.4",
-    "@mantine/hooks": "^5.10.4",
-    "@mantine/form": "^5.10.4",
-    "@mantine/notifications": "^5.10.4",
+    "@mantine/core": "^7.3.0",
+    "@mantine/hooks": "^7.3.0",
+    "@mantine/form": "^7.3.0",
+    "@mantine/notifications": "^7.3.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.8.1"
