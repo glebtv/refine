@@ -1,6 +1,6 @@
-import { MantineTheme, MantineThemeOverride } from "@mantine/core";
+import { MantineProvider, createTheme, MantineColorsTuple, MantineThemeOverride } from '@mantine/core';
 
-const commonThemeProperties: Partial<MantineThemeOverride> = {
+const commonThemeProperties: MantineThemeOverride = {
     fontFamily: [
         "Montserrat",
         "-apple-system",
@@ -149,15 +149,21 @@ const refineColors = {
     },
 } as const;
 
-export const RefineThemes = Object.keys(refineColors).reduce((acc, key) => {
+export const defaultTheme = createTheme(commonThemeProperties);
+
+const RefineThemes: Record<string, MantineThemeOverride> = Object.keys(refineColors).reduce((acc, key) => {
     const themeName = key as keyof typeof refineColors;
+
     return {
         ...acc,
-        [themeName]: {
-            colors: {
-                brand: refineColors[themeName].colors,
-            },
-            primaryColor: "brand",
-        },
+        [themeName]: createTheme({
+          ...commonThemeProperties,
+          colors: {
+            primary: refineColors[themeName].colors as MantineColorsTuple
+          },
+          primaryColor: "primary",
+        })
     };
-}, {}) as Record<keyof typeof refineColors, MantineThemeOverride>;
+}, {});
+
+export { RefineThemes };
