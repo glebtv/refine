@@ -5,13 +5,13 @@ import { useTranslate } from "@hooks/translate";
 export const AutoSaveIndicator: React.FC<AutoSaveIndicatorProps> = ({
     status,
     elements: {
-        success = <Message key="autoSave.success" defaultMessage="saved" />,
+        success = <Message tkey="autoSave.success" defaultMessage="saved" />,
         error = (
-            <Message key="autoSave.error" defaultMessage="auto save failure" />
+            <Message tkey="autoSave.error" defaultMessage="auto save failure" />
         ),
-        loading = <Message key="autoSave.loading" defaultMessage="saving..." />,
+        loading = <Message tkey="autoSave.loading" defaultMessage="saving..." />,
         idle = (
-            <Message key="autoSave.idle" defaultMessage="waiting for changes" />
+            <Message tkey="autoSave.idle" defaultMessage="waiting for changes" />
         ),
     } = {},
 }) => {
@@ -28,13 +28,13 @@ export const AutoSaveIndicator: React.FC<AutoSaveIndicatorProps> = ({
 };
 
 const Message = ({
-    key,
+    tkey,
     defaultMessage,
 }: {
-    key: string;
+    tkey: string;
     defaultMessage: string;
 }) => {
     const translate = useTranslate();
 
-    return <span>{translate(key, defaultMessage)}</span>;
+    return <span>{translate(tkey, defaultMessage)}</span>;
 };

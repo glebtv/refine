@@ -17,6 +17,10 @@ import {
 import { mockRouterBindings, MockJSONServer } from "@test";
 import { IRefineOptions } from "@refinedev/core/dist/interfaces";
 
+import {
+    MantineProvider,
+} from "@mantine/core";
+
 const List = () => {
     return <div>hede</div>;
 };
@@ -67,6 +71,7 @@ export const TestWrapper: (
     return ({ children }): React.ReactElement => {
         return (
             <BrowserRouter>
+                <MantineProvider>
                 <Refine
                     dataProvider={dataProvider ?? MockJSONServer}
                     i18nProvider={i18nProvider}
@@ -98,6 +103,7 @@ export const TestWrapper: (
                 >
                     {children}
                 </Refine>
+                </MantineProvider>
             </BrowserRouter>
         );
     };
@@ -113,3 +119,5 @@ export {
 
 // re-export everything
 export * from "@testing-library/react";
+
+export { render } from './render';

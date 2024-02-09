@@ -38,9 +38,13 @@ const ThemedLayoutV2WithoutContext: React.FC<RefineThemedLayoutV2Props> = ({
             layout="alt"
           >
 
-            <HeaderToRender />
+            <AppShell.Header>
+                <HeaderToRender />
+            </AppShell.Header>
 
-            <SiderToRender Title={Title} />
+            <AppShell.Navbar>
+                <SiderToRender Title={Title} />
+            </AppShell.Navbar>
 
             <AppShell.Main>
               {children}

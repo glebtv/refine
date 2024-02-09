@@ -22,32 +22,30 @@ export const ThemedHeaderV2: React.FC<RefineThemedLayoutV2HeaderProps> = ({}) =>
     });
 
     return (
-        <AppShell.Header>
-            <Flex
-                align="center"
-                justify="space-between"
-                style={{
-                    height: "100%",
-                    padding: "0 10px"
-                }}
-            >
-                <HamburgerMenu />
+        <Flex
+            align="center"
+            justify="space-between"
+            style={{
+                height: "100%",
+                padding: "0 10px"
+            }}
+        >
+            <HamburgerMenu />
 
-                <Flex align="center" gap="sm">
-                    {user?.name && (
-                        <Title order={6} data-testid="header-user-name">
-                            {user?.name}
-                        </Title>
-                    )}
-                    {user?.avatar && (
-                        <Avatar
-                            src={user?.avatar}
-                            alt={user?.name}
-                            radius="xl"
-                        />
-                    )}
-                </Flex>
+            <Flex align="center" gap="sm">
+                {user?.name && (
+                    <Title order={6} data-testid="header-user-name">
+                        {user?.name}
+                    </Title>
+                )}
+                {user?.avatar && (
+                    <Avatar
+                        src={user?.avatar}
+                        alt={user?.name}
+                        radius="xl"
+                    />
+                )}
             </Flex>
-        </AppShell.Header>
+        </Flex>
     );
 };

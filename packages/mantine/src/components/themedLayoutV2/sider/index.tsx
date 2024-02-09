@@ -223,7 +223,7 @@ export const ThemedSiderV2: React.FC<RefineThemedLayoutV2SiderProps> = ({
     };
 
     return (
-        <AppShell.Navbar>
+        <>
             <Flex
                 h="64px"
                 pl={collapsedLayout ? 0 : "16px"}
@@ -243,6 +243,6 @@ export const ThemedSiderV2: React.FC<RefineThemedLayoutV2SiderProps> = ({
             >
                 {renderSider()}
             </AppShell.Section>
-        </AppShell.Navbar>
+        </>
     );
 };
