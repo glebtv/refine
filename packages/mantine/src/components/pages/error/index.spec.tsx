@@ -8,7 +8,7 @@ import {
     render,
     fireEvent,
     TestWrapper as BaseTestWrapper,
-    MockLegacyRouterProvider,
+    mockLegacyRouterProvider,
     ITestWrapperProps,
 } from "@test";
 
@@ -22,7 +22,7 @@ jest.mock("react-router-dom", () => ({
 const TestWrapper = (props: ITestWrapperProps) =>
     BaseTestWrapper({
         ...props,
-        legacyRouterProvider: MockLegacyRouterProvider,
+        legacyRouterProvider: mockLegacyRouterProvider(),
     });
 
 describe("ErrorComponent", () => {

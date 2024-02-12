@@ -209,7 +209,7 @@ export const Sider: React.FC<RefineLayoutSiderProps> = ({
     };
 
     return (
-        <AppShell.Navbar>
+        <>
             <Flex
                 h="64px"
                 pl={siderCollapsed ? 0 : "16px"}
@@ -235,6 +235,6 @@ export const Sider: React.FC<RefineLayoutSiderProps> = ({
             >
                 {renderSider()}
             </AppShell.Section>
-        </AppShell.Navbar>
+        </>
     );
 };

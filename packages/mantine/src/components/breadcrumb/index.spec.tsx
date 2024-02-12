@@ -6,7 +6,7 @@ import {
     TestWrapper,
     ITestWrapperProps,
     act,
-    MockLegacyRouterProvider,
+    mockLegacyRouterProvider,
 } from "@test";
 
 import { Breadcrumb } from "./";
@@ -23,7 +23,7 @@ const renderBreadcrumb = (
         {
             wrapper: TestWrapper({
                 ...wrapperProps,
-                legacyRouterProvider: MockLegacyRouterProvider,
+                legacyRouterProvider: mockLegacyRouterProvider(),
             }),
         },
     );

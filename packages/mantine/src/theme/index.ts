@@ -149,7 +149,7 @@ const refineColors = {
     },
 } as const;
 
-export const defaultTheme = createTheme(commonThemeProperties);
+export const defaultTheme: MantineThemeOverride = createTheme(commonThemeProperties);
 
 const RefineThemes: Record<string, MantineThemeOverride> = Object.keys(refineColors).reduce((acc, key) => {
     const themeName = key as keyof typeof refineColors;

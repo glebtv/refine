@@ -1,4 +1,5 @@
 {
+  "neverConnectToCloud": true,
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/nx-cloud",
