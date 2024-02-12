@@ -31,8 +31,9 @@ export const Header: React.FC<RefineLayoutHeaderProps> = ({}) => {
         v3LegacyAuthProviderCompatible: Boolean(authProvider?.isLegacy),
     });
 
+    const shouldRenderHeader = user && (user.name || user.avatar);
 
-    return (
+    return shouldRenderHeader ? (
         <>
             <Burger
                 opened={mobileSiderOpen}
@@ -41,19 +42,15 @@ export const Header: React.FC<RefineLayoutHeaderProps> = ({}) => {
                 size="sm"
             />
             <Flex align="center" gap="sm">
-                {user?.name && (
-                    <Title order={6} data-testid="header-user-name">
-                        {user?.name}
-                    </Title>
-                )}
-                {user?.avatar && (
-                    <Avatar
-                        src={user?.avatar}
-                        alt={user?.name}
-                        radius="xl"
-                    />
-                )}
+                <Title order={6} data-testid="header-user-name">
+                    {user?.name}
+                </Title>
+                <Avatar
+                    src={user?.avatar}
+                    alt={user?.name}
+                    radius="xl"
+                />
             </Flex>
         </>
-    );
+    ) : null;
 };

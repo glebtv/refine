@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import { AccessControlProvider } from "@refinedev/core";
 import { crudShowTests } from "@refinedev/ui-tests";
 
-import { mockLegacyRouterProvider, render, TestWrapper, waitFor } from "@test";
+import { MockLegacyRouterProvider, render, TestWrapper, waitFor } from "@test";
 
 import { Show } from "./index";
 import { RefineButtonTestIds } from "@refinedev/ui-types";
@@ -26,7 +26,7 @@ const renderShow = (
             wrapper: TestWrapper({
                 routerInitialEntries: ["/posts/show/1"],
                 accessControlProvider,
-                legacyRouterProvider: mockLegacyRouterProvider(),
+                legacyRouterProvider: MockLegacyRouterProvider,
             }),
         },
     );
@@ -120,7 +120,7 @@ describe("Show", () => {
                     wrapper: TestWrapper({
                         resources: [{ name: "posts", edit: () => null }],
                         routerInitialEntries: ["/posts/show/1"],
-                        legacyRouterProvider: mockLegacyRouterProvider(),
+                        legacyRouterProvider: MockLegacyRouterProvider,
                     }),
                 },
             );
@@ -154,7 +154,7 @@ describe("Show", () => {
                     wrapper: TestWrapper({
                         resources: [{ name: "posts" }],
                         routerInitialEntries: ["/posts/show/1"],
-                        legacyRouterProvider: mockLegacyRouterProvider(),
+                        legacyRouterProvider: MockLegacyRouterProvider,
                     }),
                 },
             );
@@ -187,7 +187,7 @@ describe("Show", () => {
                     wrapper: TestWrapper({
                         resources: [{ name: "posts", edit: () => null }],
                         routerInitialEntries: ["/posts/show/1"],
-                        legacyRouterProvider: mockLegacyRouterProvider(),
+                        legacyRouterProvider: MockLegacyRouterProvider,
                     }),
                 },
             );
@@ -218,7 +218,7 @@ describe("Show", () => {
                     wrapper: TestWrapper({
                         resources: [{ name: "posts" }],
                         routerInitialEntries: ["/posts/show/1"],
-                        legacyRouterProvider: mockLegacyRouterProvider(),
+                        legacyRouterProvider: MockLegacyRouterProvider,
                     }),
                 },
             );
@@ -251,7 +251,7 @@ describe("Show", () => {
                     wrapper: TestWrapper({
                         resources: [{ name: "posts", edit: () => null }],
                         routerInitialEntries: ["/posts/show/1"],
-                        legacyRouterProvider: mockLegacyRouterProvider(),
+                        legacyRouterProvider: MockLegacyRouterProvider,
                     }),
                 },
             );
@@ -287,7 +287,7 @@ describe("Show", () => {
                     wrapper: TestWrapper({
                         resources: [{ name: "posts", canDelete: true }],
                         routerInitialEntries: ["/posts/show/1"],
-                        legacyRouterProvider: mockLegacyRouterProvider(),
+                        legacyRouterProvider: MockLegacyRouterProvider,
                     }),
                 },
             );
@@ -320,7 +320,7 @@ describe("Show", () => {
                     wrapper: TestWrapper({
                         resources: [{ name: "posts", canDelete: false }],
                         routerInitialEntries: ["/posts/show/1"],
-                        legacyRouterProvider: mockLegacyRouterProvider(),
+                        legacyRouterProvider: MockLegacyRouterProvider,
                     }),
                 },
             );
@@ -351,7 +351,7 @@ describe("Show", () => {
                     wrapper: TestWrapper({
                         resources: [{ name: "posts", canDelete: true }],
                         routerInitialEntries: ["/posts/show/1"],
-                        legacyRouterProvider: mockLegacyRouterProvider(),
+                        legacyRouterProvider: MockLegacyRouterProvider,
                     }),
                 },
             );
@@ -382,7 +382,7 @@ describe("Show", () => {
                     wrapper: TestWrapper({
                         resources: [{ name: "posts", canDelete: false }],
                         routerInitialEntries: ["/posts/show/1"],
-                        legacyRouterProvider: mockLegacyRouterProvider(),
+                        legacyRouterProvider: MockLegacyRouterProvider,
                     }),
                 },
             );
@@ -415,7 +415,7 @@ describe("Show", () => {
                     wrapper: TestWrapper({
                         resources: [{ name: "posts", canDelete: true }],
                         routerInitialEntries: ["/posts/show/1"],
-                        legacyRouterProvider: mockLegacyRouterProvider(),
+                        legacyRouterProvider: MockLegacyRouterProvider,
                     }),
                 },
             );
@@ -438,7 +438,7 @@ describe("Show", () => {
                         wrapper: TestWrapper({
                             resources: [{ name: "posts" }],
                             routerInitialEntries: ["/posts/show/1"],
-                            legacyRouterProvider: mockLegacyRouterProvider(),
+                            legacyRouterProvider: MockLegacyRouterProvider,
                         }),
                     },
                 );
@@ -459,7 +459,7 @@ describe("Show", () => {
                         wrapper: TestWrapper({
                             resources: [{ name: "posts" }],
                             routerInitialEntries: ["/posts/show/1"],
-                            legacyRouterProvider: mockLegacyRouterProvider(),
+                            legacyRouterProvider: MockLegacyRouterProvider,
                         }),
                     },
                 );
@@ -503,7 +503,7 @@ describe("Show", () => {
                 wrapper: TestWrapper({
                     resources: [{ name: "posts" }],
                     routerInitialEntries: ["/posts/show/1"],
-                    legacyRouterProvider: mockLegacyRouterProvider(),
+                    legacyRouterProvider: MockLegacyRouterProvider,
                 }),
             },
         );

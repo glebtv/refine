@@ -33,7 +33,7 @@ export const ThemedHeader: React.FC<RefineThemedLayoutHeaderProps> = ({}) => {
 
 
     return (
-        <AppShell.Header>
+        <>
             <Burger
                 opened={mobileSiderOpen}
                 onClick={() => setMobileSiderOpen(!mobileSiderOpen)}
@@ -41,19 +41,15 @@ export const ThemedHeader: React.FC<RefineThemedLayoutHeaderProps> = ({}) => {
                 size="sm"
             />
             <Flex align="center" gap="sm">
-                {user?.name && (
-                    <Title order={6} data-testid="header-user-name">
-                        {user?.name}
-                    </Title>
-                )}
-                {user?.avatar && (
-                    <Avatar
-                        src={user?.avatar}
-                        alt={user?.name}
-                        radius="xl"
-                    />
-                )}
+                <Title order={6} data-testid="header-user-name">
+                    {user?.name}
+                </Title>
+                <Avatar
+                    src={user?.avatar}
+                    alt={user?.name}
+                    radius="xl"
+                />
             </Flex>
-        </AppShell.Header>
+        </>
     );
 };

@@ -45,7 +45,7 @@ export interface ITestWrapperProps {
 export const TestWrapper: (
     props: ITestWrapperProps,
 ) => React.FC<{ children?: React.ReactNode }> = ({
-    routerProvider = mockRouterBindings(),
+    routerProvider,
     legacyRouterProvider,
     dataProvider,
     authProvider,
@@ -64,6 +64,7 @@ export const TestWrapper: (
     // is essentially to use the same router as your actual application. Besides
     // that, it's impossible to check for location changes with MemoryRouter if
     // needed.
+
     if (routerInitialEntries) {
         routerInitialEntries.forEach((route) => {
             window.history.replaceState({}, "", route);
@@ -73,13 +74,13 @@ export const TestWrapper: (
     // eslint-disable-next-line react/display-name
     return ({ children }): React.ReactElement => {
         return (
+          <MantineProvider theme={defaultTheme}>
             <BrowserRouter>
-              <MantineProvider theme={defaultTheme}>
                 <Refine
                     dataProvider={dataProvider ?? MockJSONServer}
                     i18nProvider={i18nProvider}
                     routerProvider={
-                        legacyRouterProvider ? undefined : routerProvider
+                        routerProvider
                     }
                     legacyRouterProvider={
                         legacyRouterProvider ?? MockRouterProvider
@@ -108,21 +109,22 @@ export const TestWrapper: (
                 >
                     {children}
                 </Refine>
-              </MantineProvider>
             </BrowserRouter>
+          </MantineProvider>
         );
     };
 };
 export {
     MockJSONServer,
     mockRouterBindings,
-    mockLegacyRouterProvider,
     MockAccessControlProvider,
+    MockLegacyRouterProvider,
     MockLiveProvider,
     MockAuthProvider,
 } from "./dataMocks";
 
 export {
+    mockLegacyRouterProvider,
     MockRouterProvider,
     mockLegacyAuthProvider,
 } from "@refinedev/ui-tests/dist/test";

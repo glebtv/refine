@@ -3,7 +3,7 @@ import { RefineErrorPageProps } from "@refinedev/ui-types";
 
 import {
     fireEvent,
-    mockLegacyRouterProvider,
+    MockLegacyRouterProvider,
     mockRouterBindings,
     render,
     TestWrapper,
@@ -25,12 +25,11 @@ export const pageErrorTests = function (
         it("back home button should work with legacy router provider", async () => {
             const pushMock = jest.fn();
 
-            console.log(mockLegacyRouterProvider);
-
             const { getByText } = render(<ErrorPage />, {
                 wrapper: TestWrapper({
+                    routerProvider: null,
                     legacyRouterProvider: {
-                        ...mockLegacyRouterProvider(),
+                        ...MockLegacyRouterProvider,
                         useHistory: () => ({
                             push: pushMock,
                         }),

@@ -21,6 +21,7 @@ import {
     Tooltip,
     TooltipProps,
     Flex,
+    Box
 } from "@mantine/core";
 
 import { IconList, IconPower, IconDashboard } from "@tabler/icons";
@@ -235,14 +236,14 @@ export const ThemedSiderV2: React.FC<RefineThemedLayoutV2SiderProps> = ({
             >
                 <RenderToTitle collapsed={collapsedLayout} />
             </Flex>
-            <AppShell.Section
-                grow
+            <Box
+                mod={'grow'}
                 component={ScrollArea}
                 mx="-xs"
                 px="xs"
             >
                 {renderSider()}
-            </AppShell.Section>
+            </Box>
         </>
     );
 };

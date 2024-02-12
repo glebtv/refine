@@ -1,3 +1,5 @@
+import React from "react";
+
 import {
     Action,
     AuthProvider,
@@ -97,39 +99,39 @@ export const mockRouterBindings = ({
         back: () => {
             return () => undefined;
         },
-        Link: () => null,
+        Link: ({ to, children, ...props }) => (
+            <a href={to} {...props}>
+                {children}
+            </a>
+        ),
         ...fns,
     };
 
     return bindings;
 };
 
-export const mockLegacyRouterProvider = () => {
-    const provider: IRouterContext = {
-        useHistory: () => {
-            const navigate = useNavigate();
+export const MockLegacyRouterProvider = {
+    useHistory: () => {
+        const navigate = useNavigate();
 
-            return {
-                push: navigate,
-                replace: (path: string) => {
-                    navigate(path, { replace: true });
-                },
-                goBack: () => {
-                    navigate(-1);
-                },
-            };
-        },
-        useLocation,
-        useParams: () => {
-            const params = useParams();
+        return {
+            push: navigate,
+            replace: (path: string) => {
+                navigate(path, { replace: true });
+            },
+            goBack: () => {
+                navigate(-1);
+            },
+        };
+    },
+    useLocation,
+    useParams: () => {
+        const params = useParams();
 
-            return params as any;
-        },
-        Link,
-        Prompt: () => null,
-    };
-
-    return provider;
+        return params as any;
+    },
+    Link,
+    Prompt: () => null,
 };
 
 export const MockAccessControlProvider: any = {

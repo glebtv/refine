@@ -53,6 +53,7 @@ const App: React.FC = () => {
                             resources={[
                                 {
                                     name: "posts",
+                                    meta: { route: "posts", label: "test label" },
                                     list: "/posts",
                                     show: "/posts/show/:id",
                                     create: "/posts/create",

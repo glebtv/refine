@@ -26,9 +26,13 @@ export const ThemedLayout: React.FC<RefineThemedLayoutProps> = ({
             padding="md"
           >
 
-            <HeaderToRender />
+            <AppShell.Header>
+                <HeaderToRender />
+            </AppShell.Header>
 
-            <SiderToRender Title={Title} />
+            <AppShell.Navbar>
+                <SiderToRender Title={Title} />
+            </AppShell.Navbar>
 
             <AppShell.Main>
               {children}

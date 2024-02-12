@@ -20,32 +20,14 @@ export function customRender(
     ui: React.ReactNode,
     options?: Options,
 ) {
-    let NewWrapper = DefaultWrapper
-
     if (options) {
-        const { wrapper, ...rest } = options;
-        if (wrapper) {
-            NewWrapper = function NewWrapper(props: ITestWrapperProps & { children: React.ReactElement }) {
-                if (typeof wrapper == "undefined") {
-                    return DefaultWrapper(props);
-                }
-
-                const BaseWrapper = wrapper;
-                return (
-                  <MantineProvider theme={defaultTheme}>
-                    <BaseWrapper {...props} />
-                  </MantineProvider>
-                )
-            }
+        if (!options.wrapper) {
+            options.wrapper = DefaultWrapper;
         }
-
-        return render(<>{ui}</>, {
-            ...rest,
-            wrapper: NewWrapper
-        });
+        return render(<>{ui}</>, options);
     }
 
     return render(<>{ui}</>, {
-        wrapper: NewWrapper
+        wrapper: DefaultWrapper
     });
 }

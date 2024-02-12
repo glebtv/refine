@@ -1,5 +1,6 @@
 import "@testing-library/jest-dom";
 import "@testing-library/jest-dom/extend-expect";
+import * as util from "util";
 
 /**
 * Mantine mocks
