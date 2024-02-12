@@ -64,7 +64,7 @@ export const PostEdit: React.FC = () => {
                     {...getInputProps("category.id")}
                     {...selectProps}
                 />
-                <Text mt={8} weight={500} size="sm" color="#212529">
+                <Text mt={8} fw={500} size="sm" color="#212529">
                     Content
                 </Text>
                 <MDEditor

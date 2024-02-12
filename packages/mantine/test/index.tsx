@@ -20,6 +20,9 @@ import { IRefineOptions } from "@refinedev/core/dist/interfaces";
 import {
     MantineProvider,
 } from "@mantine/core";
+import { defaultTheme } from '@theme';
+
+import { MockRouterProvider } from "@refinedev/ui-tests/dist/test";
 
 const List = () => {
     return <div>hede</div>;
@@ -71,14 +74,16 @@ export const TestWrapper: (
     return ({ children }): React.ReactElement => {
         return (
             <BrowserRouter>
-                <MantineProvider>
+              <MantineProvider theme={defaultTheme}>
                 <Refine
                     dataProvider={dataProvider ?? MockJSONServer}
                     i18nProvider={i18nProvider}
                     routerProvider={
                         legacyRouterProvider ? undefined : routerProvider
                     }
-                    legacyRouterProvider={legacyRouterProvider}
+                    legacyRouterProvider={
+                        legacyRouterProvider ?? MockRouterProvider
+                    }
                     authProvider={authProvider}
                     legacyAuthProvider={legacyAuthProvider}
                     notificationProvider={notificationProvider}
@@ -103,21 +108,26 @@ export const TestWrapper: (
                 >
                     {children}
                 </Refine>
-                </MantineProvider>
+              </MantineProvider>
             </BrowserRouter>
         );
     };
 };
 export {
-    mockRouterBindings,
     MockJSONServer,
-    MockLegacyRouterProvider,
+    mockRouterBindings,
+    mockLegacyRouterProvider,
     MockAccessControlProvider,
     MockLiveProvider,
     MockAuthProvider,
 } from "./dataMocks";
 
+export {
+    MockRouterProvider,
+    mockLegacyAuthProvider,
+} from "@refinedev/ui-tests/dist/test";
+
 // re-export everything
 export * from "@testing-library/react";
 
-export { render } from './render';
+export { customRender as render } from './render';

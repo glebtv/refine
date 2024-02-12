@@ -25,9 +25,13 @@ export const Layout: React.FC<RefineLayoutLayoutProps> = ({
         padding="md"
       >
 
-        <HeaderToRender />
+        <AppShell.Header>
+            <HeaderToRender />
+        </AppShell.Header>
 
-        <SiderToRender Title={Title} />
+        <AppShell.Navbar>
+            <SiderToRender Title={Title} />
+        </AppShell.Navbar>
 
         <AppShell.Main>
           {children}

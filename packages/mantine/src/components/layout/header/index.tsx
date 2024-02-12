@@ -33,7 +33,7 @@ export const Header: React.FC<RefineLayoutHeaderProps> = ({}) => {
 
 
     return (
-        <AppShell.Header>
+        <>
             <Burger
                 opened={mobileSiderOpen}
                 onClick={() => setMobileSiderOpen(!mobileSiderOpen)}
@@ -54,6 +54,6 @@ export const Header: React.FC<RefineLayoutHeaderProps> = ({}) => {
                     />
                 )}
             </Flex>
-        </AppShell.Header>
+        </>
     );
 };

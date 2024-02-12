@@ -7,6 +7,8 @@ import {
 } from "@refinedev/core";
 import { useParams, useLocation, Link, useNavigate } from "react-router-dom";
 
+import { IRouterContext } from "@refinedev/core/dist/interfaces";
+
 /* import {
     IDataContext,
     IRouterContext,
@@ -102,29 +104,34 @@ export const mockRouterBindings = ({
     return bindings;
 };
 
-export const MockLegacyRouterProvider = {
-    useHistory: () => {
-        const navigate = useNavigate();
+export const mockLegacyRouterProvider = () => {
+    const provider: IRouterContext = {
+        useHistory: () => {
+            const navigate = useNavigate();
 
-        return {
-            push: navigate,
-            replace: (path: string) => {
-                navigate(path, { replace: true });
-            },
-            goBack: () => {
-                navigate(-1);
-            },
-        };
-    },
-    useLocation,
-    useParams: () => {
-        const params = useParams();
+            return {
+                push: navigate,
+                replace: (path: string) => {
+                    navigate(path, { replace: true });
+                },
+                goBack: () => {
+                    navigate(-1);
+                },
+            };
+        },
+        useLocation,
+        useParams: () => {
+            const params = useParams();
 
-        return params as any;
-    },
-    Link,
-    Prompt: () => null,
+            return params as any;
+        },
+        Link,
+        Prompt: () => null,
+    };
+
+    return provider;
 };
+
 export const MockAccessControlProvider: any = {
     can: () => Promise.resolve({ can: true }),
 };
