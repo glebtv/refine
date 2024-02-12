@@ -7,8 +7,6 @@ import * as util from "util";
 *
 * info: https://mantine.dev/guides/jest/
 * */
-import '@testing-library/jest-dom/extend-expect';
-
 const { getComputedStyle } = window;
 window.getComputedStyle = (elt) => getComputedStyle(elt);
 
@@ -36,6 +34,14 @@ Object.defineProperty(window, "TextEncoder", {
 Object.defineProperty(window, "TextDecoder", {
     writable: true,
     value: util.TextDecoder,
+});
+
+import {
+    MantineProvider,
+} from "@mantine/core";
+Object.defineProperty(window, "MantineProvider", {
+    writable: true,
+    value: MantineProvider,
 });
 
 class ResizeObserver {

@@ -20,6 +20,10 @@ import { IRefineOptions } from "@refinedev/core/dist/interfaces";
 import {
     MantineProvider,
 } from "@mantine/core";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+window.MantineProvider = MantineProvider
+
 import { defaultTheme } from '@theme';
 
 import { MockRouterProvider } from "@refinedev/ui-tests/dist/test";

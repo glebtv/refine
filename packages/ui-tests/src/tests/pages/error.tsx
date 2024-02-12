@@ -3,7 +3,7 @@ import { RefineErrorPageProps } from "@refinedev/ui-types";
 
 import {
     fireEvent,
-    MockLegacyRouterProvider,
+    mockLegacyRouterProvider,
     mockRouterBindings,
     render,
     TestWrapper,
@@ -27,9 +27,8 @@ export const pageErrorTests = function (
 
             const { getByText } = render(<ErrorPage />, {
                 wrapper: TestWrapper({
-                    routerProvider: null,
                     legacyRouterProvider: {
-                        ...MockLegacyRouterProvider,
+                        ...mockLegacyRouterProvider(),
                         useHistory: () => ({
                             push: pushMock,
                         }),

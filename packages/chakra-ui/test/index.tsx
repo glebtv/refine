@@ -12,7 +12,7 @@ import {
     LegacyAuthProvider,
 } from "@refinedev/core";
 
-import { MockRouterProvider, MockJSONServer } from "@refinedev/ui-tests";
+import { MockRouterProvider, MockJSONServer } from "@test";
 
 const List = () => {
     return <div>hede</div>;

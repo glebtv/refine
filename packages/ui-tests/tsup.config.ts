@@ -13,14 +13,14 @@ const EsbuildPluginResolve = {
 export default defineConfig({
     entry: [
         "src/index.tsx",
-        "src/test/index.tsx"
+        //"src/test/index.tsx"
     ],
     splitting: false,
     sourcemap: true,
     clean: false,
     platform: "browser",
     esbuildPlugins: [
-        EsbuildPluginResolve,
+        // EsbuildPluginResolve,
         markAsExternalPlugin,
     ],
     loader: {

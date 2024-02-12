@@ -151,6 +151,16 @@ const refineColors = {
 
 export const defaultTheme: MantineThemeOverride = createTheme(commonThemeProperties);
 
+export const LightTheme: MantineThemeOverride = createTheme({
+    ...commonThemeProperties
+});
+
+// TODO
+// export const DarkTheme: MantineThemeOverride = createTheme({
+    //colorScheme: "dark",
+    // ...commonThemeProperties
+// });
+
 const RefineThemes: Record<string, MantineThemeOverride> = Object.keys(refineColors).reduce((acc, key) => {
     const themeName = key as keyof typeof refineColors;
 
