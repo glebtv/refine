@@ -1,4 +1,4 @@
-import { ComboboxItem, SelectProps } from "@mantine/core";
+import { SelectProps } from "@mantine/core";
 import { QueryObserverResult } from "@tanstack/react-query";
 
 import {
@@ -14,7 +14,7 @@ import {
 
 export type UseSelectReturnType<
     TData extends BaseRecord = BaseRecord,
-    TOption extends BaseOption = ComboboxItem,
+    TOption extends BaseOption = BaseOption,
 > = {
     selectProps: Prettify<
         Omit<SelectProps, "data"> & {
@@ -43,25 +43,19 @@ export const useSelect = <
     TQueryFnData extends BaseRecord = BaseRecord,
     TError extends HttpError = HttpError,
     TData extends BaseRecord = TQueryFnData,
-    TOption extends BaseOption = ComboboxItem,
+    TOption extends BaseOption = BaseOption,
 >(
     props: UseSelectProps<TQueryFnData, TError, TData>,
 ): UseSelectReturnType<TData, TOption> => {
-    const selectData = useSelectCore<TQueryFnData, TError, TData, TOption>(props);
-    const { queryResult, defaultValueQueryResult, onSearch } = selectData;
-    let { options } = selectData;
-
-    options = options.map(opt => {
-        opt.value = opt.value.toString()
-        return opt;
-    });
+    const { queryResult, defaultValueQueryResult, onSearch, options } =
+        useSelectCore<TQueryFnData, TError, TData, TOption>(props);
 
     return {
         selectProps: {
             data: options,
             onSearchChange: onSearch,
             searchable: true,
-            // filterDataOnExactSearchMatch: true,
+            //filterDataOnExactSearchMatch: true,
             clearable: true,
         },
         queryResult,

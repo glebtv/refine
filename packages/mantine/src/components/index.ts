@@ -30,3 +30,5 @@ export * from "./themedLayoutV2/title";
 export * from "./themedLayoutV2/types";
 
 export * from "./autoSaveIndicator";
+
+export * from "./select";
