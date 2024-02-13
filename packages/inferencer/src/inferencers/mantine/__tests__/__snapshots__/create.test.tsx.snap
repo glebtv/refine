@@ -9,36 +9,36 @@ exports[`MantineCreateInferencer should match the snapshot 1`] = `
   </style>
   <div>
     <div
-      class="m-e615b15f mantine-Card-root m-1b7284a3 mantine-Paper-root"
+      class="mantine-Card-root mantine-Paper-root"
     >
       <div
-        class="m-4081bf90 mantine-Group-root"
+        class="mantine-Group-root"
         style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
       >
         <div
-          class="m-6d731127 mantine-Stack-root"
+          class="mantine-Stack-root"
           style="--stack-gap: var(--mantine-spacing-xs); --stack-align: stretch; --stack-justify: flex-start;"
         >
           <div
-            class="m-4081bf90 mantine-Group-root"
+            class="mantine-Group-root"
             style="--group-gap: var(--mantine-spacing-xs); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
           >
             <button
-              class="mantine-focus-auto mantine-active m-8d3f4000 mantine-ActionIcon-root m-87cf2631 mantine-UnstyledButton-root"
+              class="mantine-focus-auto mantine-active mantine-ActionIcon-root mantine-UnstyledButton-root"
               style="--ai-color: var(--mantine-color-white);"
               type="button"
             >
               <span
                 aria-hidden="true"
-                class="m-302b9fb1 mantine-ActionIcon-loader"
+                class="mantine-ActionIcon-loader"
               >
                 <span
-                  class="m-b34414df m-5ae2e3c mantine-Loader-root"
+                  class="mantine-Loader-root"
                   style="--loader-size: calc(var(--ai-size) * 0.55); --loader-color: var(--ai-color);"
                 />
               </span>
               <span
-                class="m-8d3afb97 mantine-ActionIcon-icon"
+                class="mantine-ActionIcon-icon"
               >
                 <svg
                   class="icon icon-tabler icon-tabler-arrow-left"
@@ -79,7 +79,7 @@ exports[`MantineCreateInferencer should match the snapshot 1`] = `
               </span>
             </button>
             <h3
-              class="refine-pageHeader-title m-8a5d1357 mantine-Title-root"
+              class="refine-pageHeader-title mantine-Title-root"
               data-order="3"
               style="--title-fw: var(--mantine-h3-font-weight); --title-lh: var(--mantine-h3-line-height); --title-fz: var(--mantine-h3-font-size);"
             >
@@ -88,7 +88,7 @@ exports[`MantineCreateInferencer should match the snapshot 1`] = `
           </div>
         </div>
         <div
-          class="m-4081bf90 mantine-Group-root"
+          class="mantine-Group-root"
           style="--group-gap: var(--mantine-spacing-xs); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
         />
       </div>
@@ -96,110 +96,110 @@ exports[`MantineCreateInferencer should match the snapshot 1`] = `
         class=""
       >
         <div
-          class="m-46b77525 mantine-InputWrapper-root mantine-TextInput-root"
+          class="mantine-InputWrapper-root mantine-TextInput-root"
         >
           <label
-            class="m-8fdc1311 mantine-InputWrapper-label mantine-TextInput-label"
-            for="mantine-9g73b597k"
-            id="mantine-9g73b597k-label"
+            class="mantine-InputWrapper-label mantine-TextInput-label"
+            for=""
+            id=""
           >
             Title
           </label>
           <div
-            class="m-6c018570 mantine-Input-wrapper mantine-TextInput-wrapper"
+            class="mantine-Input-wrapper mantine-TextInput-wrapper"
             data-variant="default"
           >
             <input
               aria-invalid="false"
-              class="m-8fb7ebe7 mantine-Input-input mantine-TextInput-input"
+              class="mantine-Input-input mantine-TextInput-input"
               data-variant="default"
-              id="mantine-9g73b597k"
+              id=""
               value=""
             />
           </div>
         </div>
         <div
-          class="m-46b77525 mantine-InputWrapper-root mantine-TextInput-root"
+          class="mantine-InputWrapper-root mantine-TextInput-root"
         >
           <label
-            class="m-8fdc1311 mantine-InputWrapper-label mantine-TextInput-label"
-            for="mantine-iikgipt6v"
-            id="mantine-iikgipt6v-label"
+            class="mantine-InputWrapper-label mantine-TextInput-label"
+            for=""
+            id=""
           >
             Slug
           </label>
           <div
-            class="m-6c018570 mantine-Input-wrapper mantine-TextInput-wrapper"
+            class="mantine-Input-wrapper mantine-TextInput-wrapper"
             data-variant="default"
           >
             <input
               aria-invalid="false"
-              class="m-8fb7ebe7 mantine-Input-input mantine-TextInput-input"
+              class="mantine-Input-input mantine-TextInput-input"
               data-variant="default"
-              id="mantine-iikgipt6v"
+              id=""
               value=""
             />
           </div>
         </div>
         <div
-          class="m-46b77525 mantine-InputWrapper-root mantine-Textarea-root"
+          class="mantine-InputWrapper-root mantine-Textarea-root"
         >
           <label
-            class="m-8fdc1311 mantine-InputWrapper-label mantine-Textarea-label"
-            for="mantine-bstlaf9c3"
-            id="mantine-bstlaf9c3-label"
+            class="mantine-InputWrapper-label mantine-Textarea-label"
+            for=""
+            id=""
           >
             Content
           </label>
           <div
-            class="m-6c018570 mantine-Input-wrapper mantine-Textarea-wrapper"
+            class="mantine-Input-wrapper mantine-Textarea-wrapper"
             data-multiline="true"
             data-variant="default"
           >
             <textarea
               aria-invalid="false"
-              class="m-8fb7ebe7 mantine-Input-input mantine-Textarea-input"
+              class="mantine-Input-input mantine-Textarea-input"
               data-no-overflow="true"
               data-variant="default"
-              id="mantine-bstlaf9c3"
+              id=""
             />
           </div>
         </div>
         <div
-          class="m-e2f5cd4e m-46b77525 mantine-InputWrapper-root mantine-NumberInput-root"
+          class="mantine-InputWrapper-root mantine-NumberInput-root"
         >
           <label
-            class="m-8fdc1311 mantine-InputWrapper-label mantine-NumberInput-label"
-            for="mantine-xvgac0i15"
-            id="mantine-xvgac0i15-label"
+            class="mantine-InputWrapper-label mantine-NumberInput-label"
+            for=""
+            id=""
           >
             Hit
           </label>
           <div
-            class="m-6c018570 mantine-Input-wrapper mantine-NumberInput-wrapper"
+            class="mantine-Input-wrapper mantine-NumberInput-wrapper"
             data-variant="default"
             data-with-right-section="true"
             style="--input-right-section-width: var(--ni-right-section-width-sm);"
           >
             <input
               aria-invalid="false"
-              class="m-8fb7ebe7 mantine-Input-input mantine-NumberInput-input"
+              class="mantine-Input-input mantine-NumberInput-input"
               data-variant="default"
-              id="mantine-xvgac0i15"
+              id=""
               inputmode="numeric"
               type="text"
               value=""
             />
             <div
-              class="m-82577fc2 mantine-Input-section mantine-NumberInput-section"
+              class="mantine-Input-section mantine-NumberInput-section"
               data-position="right"
             >
               <div
-                class="m-95e17d22 mantine-NumberInput-controls"
+                class="mantine-NumberInput-controls"
               >
                 <button
                   aria-hidden="true"
-                  class="mantine-focus-auto m-80b4b171 mantine-NumberInput-control m-87cf2631 mantine-UnstyledButton-root"
+                  class="mantine-focus-auto mantine-NumberInput-control mantine-UnstyledButton-root"
                   data-direction="up"
                   tabindex="-1"
                   type="button"
@@ -220,7 +220,7 @@ exports[`MantineCreateInferencer should match the snapshot 1`] = `
                 </button>
                 <button
                   aria-hidden="true"
-                  class="mantine-focus-auto m-80b4b171 mantine-NumberInput-control m-87cf2631 mantine-UnstyledButton-root"
+                  class="mantine-focus-auto mantine-NumberInput-control mantine-UnstyledButton-root"
                   data-direction="down"
                   tabindex="-1"
                   type="button"
@@ -243,37 +243,37 @@ exports[`MantineCreateInferencer should match the snapshot 1`] = `
           </div>
         </div>
         <div
-          class="m-46b77525 mantine-InputWrapper-root mantine-Select-root"
+          class="mantine-InputWrapper-root mantine-Select-root"
         >
           <label
-            class="m-8fdc1311 mantine-InputWrapper-label mantine-Select-label"
-            for="mantine-nb9ql04ta"
-            id="mantine-nb9ql04ta-label"
+            class="mantine-InputWrapper-label mantine-Select-label"
+            for=""
+            id=""
           >
             Category
           </label>
           <div
-            class="m-6c018570 mantine-Input-wrapper mantine-Select-wrapper"
+            class="mantine-Input-wrapper mantine-Select-wrapper"
             data-variant="default"
             data-with-right-section="true"
             style="--input-right-section-pointer-events: none;"
           >
             <input
-              aria-controls="mantine-hdy9g6afn"
+              aria-controls=""
               aria-haspopup="listbox"
               aria-invalid="false"
               autocomplete="off"
-              class="m-8fb7ebe7 mantine-Input-input mantine-Select-input"
+              class="mantine-Input-input mantine-Select-input"
               data-variant="default"
-              id="mantine-nb9ql04ta"
+              id=""
               value=""
             />
             <div
-              class="m-82577fc2 mantine-Input-section mantine-Select-section"
+              class="mantine-Input-section mantine-Select-section"
               data-position="right"
             >
               <svg
-                class="m-2943220b mantine-ComboboxChevron-chevron"
+                class="mantine-ComboboxChevron-chevron"
                 data-combobox-chevron="true"
                 fill="none"
                 viewBox="0 0 15 15"
@@ -294,37 +294,37 @@ exports[`MantineCreateInferencer should match the snapshot 1`] = `
           value=""
         />
         <div
-          class="m-46b77525 mantine-InputWrapper-root mantine-Select-root"
+          class="mantine-InputWrapper-root mantine-Select-root"
         >
           <label
-            class="m-8fdc1311 mantine-InputWrapper-label mantine-Select-label"
-            for="mantine-io21qy19y"
-            id="mantine-io21qy19y-label"
+            class="mantine-InputWrapper-label mantine-Select-label"
+            for=""
+            id=""
           >
             User
           </label>
           <div
-            class="m-6c018570 mantine-Input-wrapper mantine-Select-wrapper"
+            class="mantine-Input-wrapper mantine-Select-wrapper"
             data-variant="default"
             data-with-right-section="true"
             style="--input-right-section-pointer-events: none;"
           >
             <input
-              aria-controls="mantine-85qfqtshl"
+              aria-controls=""
               aria-haspopup="listbox"
               aria-invalid="false"
               autocomplete="off"
-              class="m-8fb7ebe7 mantine-Input-input mantine-Select-input"
+              class="mantine-Input-input mantine-Select-input"
               data-variant="default"
-              id="mantine-io21qy19y"
+              id=""
               value=""
             />
             <div
-              class="m-82577fc2 mantine-Input-section mantine-Select-section"
+              class="mantine-Input-section mantine-Select-section"
               data-position="right"
             >
               <svg
-                class="m-2943220b mantine-ComboboxChevron-chevron"
+                class="mantine-ComboboxChevron-chevron"
                 data-combobox-chevron="true"
                 fill="none"
                 viewBox="0 0 15 15"
@@ -345,140 +345,140 @@ exports[`MantineCreateInferencer should match the snapshot 1`] = `
           value=""
         />
         <div
-          class="m-46b77525 mantine-InputWrapper-root mantine-TextInput-root"
+          class="mantine-InputWrapper-root mantine-TextInput-root"
         >
           <label
-            class="m-8fdc1311 mantine-InputWrapper-label mantine-TextInput-label"
-            for="mantine-5ihdghv2h"
-            id="mantine-5ihdghv2h-label"
+            class="mantine-InputWrapper-label mantine-TextInput-label"
+            for=""
+            id=""
           >
             Status
           </label>
           <div
-            class="m-6c018570 mantine-Input-wrapper mantine-TextInput-wrapper"
+            class="mantine-Input-wrapper mantine-TextInput-wrapper"
             data-variant="default"
           >
             <input
               aria-invalid="false"
-              class="m-8fb7ebe7 mantine-Input-input mantine-TextInput-input"
+              class="mantine-Input-input mantine-TextInput-input"
               data-variant="default"
-              id="mantine-5ihdghv2h"
+              id=""
               value=""
             />
           </div>
         </div>
         <div
-          class="m-46b77525 mantine-InputWrapper-root mantine-TextInput-root"
+          class="mantine-InputWrapper-root mantine-TextInput-root"
         >
           <label
-            class="m-8fdc1311 mantine-InputWrapper-label mantine-TextInput-label"
-            for="mantine-eul5doabh"
-            id="mantine-eul5doabh-label"
+            class="mantine-InputWrapper-label mantine-TextInput-label"
+            for=""
+            id=""
           >
             Status Color
           </label>
           <div
-            class="m-6c018570 mantine-Input-wrapper mantine-TextInput-wrapper"
+            class="mantine-Input-wrapper mantine-TextInput-wrapper"
             data-variant="default"
           >
             <input
               aria-invalid="false"
-              class="m-8fb7ebe7 mantine-Input-input mantine-TextInput-input"
+              class="mantine-Input-input mantine-TextInput-input"
               data-variant="default"
-              id="mantine-eul5doabh"
+              id=""
               value=""
             />
           </div>
         </div>
         <div
-          class="m-46b77525 mantine-InputWrapper-root mantine-TextInput-root"
+          class="mantine-InputWrapper-root mantine-TextInput-root"
         >
           <label
-            class="m-8fdc1311 mantine-InputWrapper-label mantine-TextInput-label"
-            for="mantine-t78sc11us"
-            id="mantine-t78sc11us-label"
+            class="mantine-InputWrapper-label mantine-TextInput-label"
+            for=""
+            id=""
           >
             Created At
           </label>
           <div
-            class="m-6c018570 mantine-Input-wrapper mantine-TextInput-wrapper"
+            class="mantine-Input-wrapper mantine-TextInput-wrapper"
             data-variant="default"
           >
             <input
               aria-invalid="false"
-              class="m-8fb7ebe7 mantine-Input-input mantine-TextInput-input"
+              class="mantine-Input-input mantine-TextInput-input"
               data-variant="default"
-              id="mantine-t78sc11us"
+              id=""
               value=""
             />
           </div>
         </div>
         <div
-          class="m-46b77525 mantine-InputWrapper-root mantine-TextInput-root"
+          class="mantine-InputWrapper-root mantine-TextInput-root"
         >
           <label
-            class="m-8fdc1311 mantine-InputWrapper-label mantine-TextInput-label"
-            for="mantine-9g43xlrp6"
-            id="mantine-9g43xlrp6-label"
+            class="mantine-InputWrapper-label mantine-TextInput-label"
+            for=""
+            id=""
           >
             Published At
           </label>
           <div
-            class="m-6c018570 mantine-Input-wrapper mantine-TextInput-wrapper"
+            class="mantine-Input-wrapper mantine-TextInput-wrapper"
             data-variant="default"
           >
             <input
               aria-invalid="false"
-              class="m-8fb7ebe7 mantine-Input-input mantine-TextInput-input"
+              class="mantine-Input-input mantine-TextInput-input"
               data-variant="default"
-              id="mantine-9g43xlrp6"
+              id=""
               value=""
             />
           </div>
         </div>
         <div
-          class="m-46b77525 mantine-InputWrapper-root mantine-MultiSelect-root"
+          class="mantine-InputWrapper-root mantine-MultiSelect-root"
         >
           <label
-            class="m-8fdc1311 mantine-InputWrapper-label mantine-MultiSelect-label"
-            for="mantine-pe5vqh9j3"
-            id="mantine-pe5vqh9j3-label"
+            class="mantine-InputWrapper-label mantine-MultiSelect-label"
+            for=""
+            id=""
           >
             Tags
           </label>
           <div
-            class="m-6c018570 mantine-Input-wrapper mantine-MultiSelect-wrapper"
+            class="mantine-Input-wrapper mantine-MultiSelect-wrapper"
             data-multiline="true"
             data-variant="default"
             data-with-right-section="true"
             style="--input-right-section-pointer-events: none;"
           >
             <div
-              class="m-8fb7ebe7 mantine-Input-input mantine-MultiSelect-input"
+              class="mantine-Input-input mantine-MultiSelect-input"
               data-variant="default"
             >
               <div
-                class="mantine-MultiSelect-pillsList m-1dcfd90b mantine-PillGroup-group"
+                class="mantine-MultiSelect-pillsList mantine-PillGroup-group"
               >
                 <input
-                  aria-controls="mantine-zf23j8tzu"
+                  aria-controls=""
                   aria-haspopup="listbox"
                   aria-invalid="false"
                   autocomplete="off"
-                  class="mantine-MultiSelect-inputField m-45c4369d mantine-PillsInputField-field"
+                  class="mantine-MultiSelect-inputField mantine-PillsInputField-field"
                   data-type="visible"
-                  id="mantine-pe5vqh9j3"
+                  id=""
                   type="text"
                   value=""
                 />
               </div>
             </div>
             <div
-              class="m-82577fc2 mantine-Input-section mantine-MultiSelect-section"
+              class="mantine-Input-section mantine-MultiSelect-section"
               data-position="right"
             >
               <svg
-                class="m-2943220b mantine-ComboboxChevron-chevron"
+                class="mantine-ComboboxChevron-chevron"
                 data-combobox-chevron="true"
                 fill="none"
                 viewBox="0 0 15 15"
@@ -499,40 +499,40 @@ exports[`MantineCreateInferencer should match the snapshot 1`] = `
           value=""
         />
         <div
-          class="m-e2f5cd4e m-46b77525 mantine-InputWrapper-root mantine-NumberInput-root"
+          class="mantine-InputWrapper-root mantine-NumberInput-root"
         >
           <label
-            class="m-8fdc1311 mantine-InputWrapper-label mantine-NumberInput-label"
-            for="mantine-o9tly36yv"
-            id="mantine-o9tly36yv-label"
+            class="mantine-InputWrapper-label mantine-NumberInput-label"
+            for=""
+            id=""
           >
             Language
           </label>
           <div
-            class="m-6c018570 mantine-Input-wrapper mantine-NumberInput-wrapper"
+            class="mantine-Input-wrapper mantine-NumberInput-wrapper"
             data-variant="default"
             data-with-right-section="true"
             style="--input-right-section-width: var(--ni-right-section-width-sm);"
           >
             <input
               aria-invalid="false"
-              class="m-8fb7ebe7 mantine-Input-input mantine-NumberInput-input"
+              class="mantine-Input-input mantine-NumberInput-input"
               data-variant="default"
-              id="mantine-o9tly36yv"
+              id=""
               inputmode="numeric"
               type="text"
               value=""
             />
             <div
-              class="m-82577fc2 mantine-Input-section mantine-NumberInput-section"
+              class="mantine-Input-section mantine-NumberInput-section"
               data-position="right"
             >
               <div
-                class="m-95e17d22 mantine-NumberInput-controls"
+                class="mantine-NumberInput-controls"
               >
                 <button
                   aria-hidden="true"
-                  class="mantine-focus-auto m-80b4b171 mantine-NumberInput-control m-87cf2631 mantine-UnstyledButton-root"
+                  class="mantine-focus-auto mantine-NumberInput-control mantine-UnstyledButton-root"
                   data-direction="up"
                   tabindex="-1"
                   type="button"
@@ -553,7 +553,7 @@ exports[`MantineCreateInferencer should match the snapshot 1`] = `
                 </button>
                 <button
                   aria-hidden="true"
-                  class="mantine-focus-auto m-80b4b171 mantine-NumberInput-control m-87cf2631 mantine-UnstyledButton-root"
+                  class="mantine-focus-auto mantine-NumberInput-control mantine-UnstyledButton-root"
                   data-direction="down"
                   tabindex="-1"
                   type="button"
@@ -577,11 +577,11 @@ exports[`MantineCreateInferencer should match the snapshot 1`] = `
         </div>
       </div>
       <div
-        class="m-4081bf90 mantine-Group-root"
+        class="mantine-Group-root"
         style="--group-gap: var(--mantine-spacing-xs); --group-align: right; --group-justify: flex-start; --group-wrap: wrap;"
       >
         <button
-          class="mantine-focus-auto mantine-active refine-save-button m-77c9d27d mantine-Button-root m-87cf2631 mantine-UnstyledButton-root"
+          class="mantine-focus-auto mantine-active refine-save-button mantine-Button-root mantine-UnstyledButton-root"
           data-variant="filled"
           data-with-left-section="true"
           style="--button-bg: var(--mantine-color-blue-filled); --button-hover: var(--mantine-color-blue-filled-hover); --button-color: var(--mantine-color-white); --button-bd: calc(0.0625rem * var(--mantine-scale)) solid transparent;"
@@ -589,18 +589,18 @@ exports[`MantineCreateInferencer should match the snapshot 1`] = `
         >
           <span
             aria-hidden="true"
-            class="m-a25b86ee mantine-Button-loader"
+            class="mantine-Button-loader"
           >
             <span
-              class="m-b34414df m-5ae2e3c mantine-Loader-root"
+              class="mantine-Loader-root"
               style="--loader-size: calc(var(--button-height) / 1.8); --loader-color: var(--button-color);"
             />
           </span>
           <span
-            class="m-80f1301b mantine-Button-inner"
+            class="mantine-Button-inner"
           >
             <span
-              class="m-a74036a mantine-Button-section"
+              class="mantine-Button-section"
               data-position="left"
             >
               <svg
@@ -634,7 +634,7 @@ exports[`MantineCreateInferencer should match the snapshot 1`] = `
               </svg>
             </span>
             <span
-              class="m-811560b9 mantine-Button-label"
+              class="mantine-Button-label"
             >
               Save
             </span>

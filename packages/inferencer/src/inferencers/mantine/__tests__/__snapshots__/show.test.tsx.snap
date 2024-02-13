@@ -9,36 +9,36 @@ exports[`MantineShowInferencer should match the snapshot 1`] = `
   </style>
   <div>
     <div
-      class="m-e615b15f mantine-Card-root m-1b7284a3 mantine-Paper-root"
+      class="mantine-Card-root mantine-Paper-root"
     >
       <div
-        class="m-4081bf90 mantine-Group-root"
+        class="mantine-Group-root"
         style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: space-between; --group-wrap: wrap;"
       >
         <div
-          class="m-6d731127 mantine-Stack-root"
+          class="mantine-Stack-root"
           style="--stack-gap: var(--mantine-spacing-xs); --stack-align: stretch; --stack-justify: flex-start;"
         >
           <div
-            class="m-4081bf90 mantine-Group-root"
+            class="mantine-Group-root"
             style="--group-gap: var(--mantine-spacing-xs); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
           >
             <button
-              class="mantine-focus-auto mantine-active m-8d3f4000 mantine-ActionIcon-root m-87cf2631 mantine-UnstyledButton-root"
+              class="mantine-focus-auto mantine-active mantine-ActionIcon-root mantine-UnstyledButton-root"
               style="--ai-color: var(--mantine-color-white);"
               type="button"
             >
               <span
                 aria-hidden="true"
-                class="m-302b9fb1 mantine-ActionIcon-loader"
+                class="mantine-ActionIcon-loader"
               >
                 <span
-                  class="m-b34414df m-5ae2e3c mantine-Loader-root"
+                  class="mantine-Loader-root"
                   style="--loader-size: calc(var(--ai-size) * 0.55); --loader-color: var(--ai-color);"
                 />
               </span>
               <span
-                class="m-8d3afb97 mantine-ActionIcon-icon"
+                class="mantine-ActionIcon-icon"
               >
                 <svg
                   class="icon icon-tabler icon-tabler-arrow-left"
@@ -79,7 +79,7 @@ exports[`MantineShowInferencer should match the snapshot 1`] = `
               </span>
             </button>
             <h3
-              class="refine-pageHeader-title m-8a5d1357 mantine-Title-root"
+              class="refine-pageHeader-title mantine-Title-root"
               data-order="3"
               style="--title-fw: var(--mantine-h3-font-weight); --title-lh: var(--mantine-h3-line-height); --title-fz: var(--mantine-h3-font-size);"
             >
@@ -88,16 +88,16 @@ exports[`MantineShowInferencer should match the snapshot 1`] = `
           </div>
         </div>
         <div
-          class="m-4081bf90 mantine-Group-root"
+          class="mantine-Group-root"
           style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
         >
           <a
-            class="mantine-focus-auto m-849cf0da m-b6d8b162 mantine-Text-root mantine-Anchor-root"
+            class="mantine-focus-auto mantine-Text-root mantine-Anchor-root"
             data-underline="hover"
             href="/posts"
           >
             <button
-              class="mantine-focus-auto mantine-active refine-list-button m-77c9d27d mantine-Button-root m-87cf2631 mantine-UnstyledButton-root"
+              class="mantine-focus-auto mantine-active refine-list-button mantine-Button-root mantine-UnstyledButton-root"
               data-variant="default"
               data-with-left-section="true"
               style="--button-bg: var(--mantine-color-default); --button-hover: var(--mantine-color-default-hover); --button-color: var(--mantine-color-default-color); --button-bd: calc(0.0625rem * var(--mantine-scale)) solid var(--mantine-color-default-border);"
@@ -106,18 +106,18 @@ exports[`MantineShowInferencer should match the snapshot 1`] = `
             >
               <span
                 aria-hidden="true"
-                class="m-a25b86ee mantine-Button-loader"
+                class="mantine-Button-loader"
               >
                 <span
-                  class="m-b34414df m-5ae2e3c mantine-Loader-root"
+                  class="mantine-Loader-root"
                   style="--loader-size: calc(var(--button-height) / 1.8); --loader-color: var(--button-color);"
                 />
               </span>
               <span
-                class="m-80f1301b mantine-Button-inner"
+                class="mantine-Button-inner"
               >
                 <span
-                  class="m-a74036a mantine-Button-section"
+                  class="mantine-Button-section"
                   data-position="left"
                 >
                   <svg
@@ -176,7 +176,7 @@ exports[`MantineShowInferencer should match the snapshot 1`] = `
                   </svg>
                 </span>
                 <span
-                  class="m-811560b9 mantine-Button-label"
+                  class="mantine-Button-label"
                 >
                   Posts
                 </span>
@@ -184,7 +184,7 @@ exports[`MantineShowInferencer should match the snapshot 1`] = `
             </button>
           </a>
           <button
-            class="mantine-focus-auto mantine-active refine-refresh-button m-77c9d27d mantine-Button-root m-87cf2631 mantine-UnstyledButton-root"
+            class="mantine-focus-auto mantine-active refine-refresh-button mantine-Button-root mantine-UnstyledButton-root"
             data-variant="default"
             data-with-left-section="true"
             style="--button-bg: var(--mantine-color-default); --button-hover: var(--mantine-color-default-hover); --button-color: var(--mantine-color-default-color); --button-bd: calc(0.0625rem * var(--mantine-scale)) solid var(--mantine-color-default-border);"
@@ -192,18 +192,18 @@ exports[`MantineShowInferencer should match the snapshot 1`] = `
           >
             <span
               aria-hidden="true"
-              class="m-a25b86ee mantine-Button-loader"
+              class="mantine-Button-loader"
             >
               <span
-                class="m-b34414df m-5ae2e3c mantine-Loader-root"
+                class="mantine-Loader-root"
                 style="--loader-size: calc(var(--button-height) / 1.8); --loader-color: var(--button-color);"
               />
             </span>
             <span
-              class="m-80f1301b mantine-Button-inner"
+              class="mantine-Button-inner"
             >
               <span
-                class="m-a74036a mantine-Button-section"
+                class="mantine-Button-section"
                 data-position="left"
               >
                 <svg
@@ -232,7 +232,7 @@ exports[`MantineShowInferencer should match the snapshot 1`] = `
                 </svg>
               </span>
               <span
-                class="m-811560b9 mantine-Button-label"
+                class="mantine-Button-label"
               >
                 Refresh
               </span>
@@ -244,43 +244,43 @@ exports[`MantineShowInferencer should match the snapshot 1`] = `
         class=""
       >
         <h5
-          class="m-8a5d1357 mantine-Title-root"
+          class="mantine-Title-root"
           data-order="5"
           style="--title-fw: var(--mantine-h5-font-weight); --title-lh: var(--mantine-h5-line-height); --title-fz: var(--mantine-h5-font-size);"
         >
           Id
         </h5>
         <p
-          class="mantine-focus-auto m-b6d8b162 mantine-Text-root"
+          class="mantine-focus-auto mantine-Text-root"
         >
           11
         </p>
         <h5
-          class="m-8a5d1357 mantine-Title-root"
+          class="mantine-Title-root"
           data-order="5"
           style="--title-fw: var(--mantine-h5-font-weight); --title-lh: var(--mantine-h5-line-height); --title-fz: var(--mantine-h5-font-size);"
         >
           Title
         </h5>
         <p
-          class="mantine-focus-auto m-b6d8b162 mantine-Text-root"
+          class="mantine-focus-auto mantine-Text-root"
         >
           Nobis exercitationem officia quia est.
         </p>
         <h5
-          class="m-8a5d1357 mantine-Title-root"
+          class="mantine-Title-root"
           data-order="5"
           style="--title-fw: var(--mantine-h5-font-weight); --title-lh: var(--mantine-h5-line-height); --title-fz: var(--mantine-h5-font-size);"
         >
           Slug
         </h5>
         <p
-          class="mantine-focus-auto m-b6d8b162 mantine-Text-root"
+          class="mantine-focus-auto mantine-Text-root"
         >
           provident-culpa-facere
         </p>
         <h5
-          class="m-8a5d1357 mantine-Title-root"
+          class="mantine-Title-root"
           data-order="5"
           style="--title-fw: var(--mantine-h5-font-weight); --title-lh: var(--mantine-h5-line-height); --title-fz: var(--mantine-h5-font-size);"
         >
@@ -290,19 +290,19 @@ exports[`MantineShowInferencer should match the snapshot 1`] = `
           Non velit blanditiis optio quo quaerat nam aperiam. Odit tempore consequatur voluptatibus molestias. Est nemo aut. Fugit aliquam enim eveniet veritatis. Magni et aut. Consequatur aliquid rerum vero. Quaerat debitis enim magnam. Dolorem est delectus architecto et accusantium. Velit quia vero. Aut necessitatibus quia at consequatur soluta accusantium.
         </p>
         <h5
-          class="m-8a5d1357 mantine-Title-root"
+          class="mantine-Title-root"
           data-order="5"
           style="--title-fw: var(--mantine-h5-font-weight); --title-lh: var(--mantine-h5-line-height); --title-fz: var(--mantine-h5-font-size);"
         >
           Hit
         </h5>
         <p
-          class="mantine-focus-auto m-b6d8b162 mantine-Text-root"
+          class="mantine-focus-auto mantine-Text-root"
         >
           920,557
         </p>
         <h5
-          class="m-8a5d1357 mantine-Title-root"
+          class="mantine-Title-root"
           data-order="5"
           style="--title-fw: var(--mantine-h5-font-weight); --title-lh: var(--mantine-h5-line-height); --title-fz: var(--mantine-h5-font-size);"
         >
@@ -310,7 +310,7 @@ exports[`MantineShowInferencer should match the snapshot 1`] = `
         </h5>
         Numquam Saepe Illo
         <h5
-          class="m-8a5d1357 mantine-Title-root"
+          class="mantine-Title-root"
           data-order="5"
           style="--title-fw: var(--mantine-h5-font-weight); --title-lh: var(--mantine-h5-line-height); --title-fz: var(--mantine-h5-font-size);"
         >
@@ -318,93 +318,93 @@ exports[`MantineShowInferencer should match the snapshot 1`] = `
         </h5>
         Eriberto Leannon
         <h5
-          class="m-8a5d1357 mantine-Title-root"
+          class="mantine-Title-root"
           data-order="5"
           style="--title-fw: var(--mantine-h5-font-weight); --title-lh: var(--mantine-h5-line-height); --title-fz: var(--mantine-h5-font-size);"
         >
           Status
         </h5>
         <p
-          class="mantine-focus-auto m-b6d8b162 mantine-Text-root"
+          class="mantine-focus-auto mantine-Text-root"
         >
           draft
         </p>
         <h5
-          class="m-8a5d1357 mantine-Title-root"
+          class="mantine-Title-root"
           data-order="5"
           style="--title-fw: var(--mantine-h5-font-weight); --title-lh: var(--mantine-h5-line-height); --title-fz: var(--mantine-h5-font-size);"
         >
           Status Color
         </h5>
         <p
-          class="mantine-focus-auto m-b6d8b162 mantine-Text-root"
+          class="mantine-focus-auto mantine-Text-root"
         >
           orange
         </p>
         <h5
-          class="m-8a5d1357 mantine-Title-root"
+          class="mantine-Title-root"
           data-order="5"
           style="--title-fw: var(--mantine-h5-font-weight); --title-lh: var(--mantine-h5-line-height); --title-fz: var(--mantine-h5-font-size);"
         >
           Created At
         </h5>
         <p
-          class="mantine-focus-auto m-b6d8b162 mantine-Text-root"
+          class="mantine-focus-auto mantine-Text-root"
         >
           04/02/2022
         </p>
         <h5
-          class="m-8a5d1357 mantine-Title-root"
+          class="mantine-Title-root"
           data-order="5"
           style="--title-fw: var(--mantine-h5-font-weight); --title-lh: var(--mantine-h5-line-height); --title-fz: var(--mantine-h5-font-size);"
         >
           Published At
         </h5>
         <p
-          class="mantine-focus-auto m-b6d8b162 mantine-Text-root"
+          class="mantine-focus-auto mantine-Text-root"
         >
           08/10/2021
         </p>
         <h5
-          class="m-8a5d1357 mantine-Title-root"
+          class="mantine-Title-root"
           data-order="5"
           style="--title-fw: var(--mantine-h5-font-weight); --title-lh: var(--mantine-h5-line-height); --title-fz: var(--mantine-h5-font-size);"
         >
           Image
         </h5>
         <div
-          class="m-4081bf90 mantine-Group-root"
+          class="mantine-Group-root"
           style="--group-gap: var(--mantine-spacing-xs); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
         >
           <img
-            class="m-9e117634 mantine-Image-root"
+            class="mantine-Image-root"
             src="http://loremflickr.com/640/480/abstract"
             sx="[object Object]"
           />
         </div>
         <h5
-          class="m-8a5d1357 mantine-Title-root"
+          class="mantine-Title-root"
           data-order="5"
           style="--title-fw: var(--mantine-h5-font-weight); --title-lh: var(--mantine-h5-line-height); --title-fz: var(--mantine-h5-font-size);"
         >
           Tags
         </h5>
         <div
-          class="m-4081bf90 mantine-Group-root"
+          class="mantine-Group-root"
           style="--group-gap: var(--mantine-spacing-xs); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
         >
           <div
-            class="m-f59ffda3 mantine-Chip-root"
+            class="mantine-Chip-root"
           >
             <input
-              class="m-bde07329 mantine-Chip-input"
-              id="mantine-7jb54fset"
+              class="mantine-Chip-input"
+              id=""
               type="checkbox"
               value=""
             />
             <label
-              class="m-fa109255 m-be049a53 mantine-Chip-label"
-              for="mantine-7jb54fset"
+              class="mantine-Chip-label"
+              for=""
             >
               <span>
                 Error Eos Et
@@ -412,17 +412,17 @@ exports[`MantineShowInferencer should match the snapshot 1`] = `
             </label>
           </div>
           <div
-            class="m-f59ffda3 mantine-Chip-root"
+            class="mantine-Chip-root"
           >
             <input
-              class="m-bde07329 mantine-Chip-input"
-              id="mantine-phwi31ws0"
+              class="mantine-Chip-input"
+              id=""
               type="checkbox"
               value=""
             />
             <label
-              class="m-fa109255 m-be049a53 mantine-Chip-label"
-              for="mantine-phwi31ws0"
+              class="mantine-Chip-label"
+              for=""
             >
               <span>
                 Nobis Et Ut
@@ -431,20 +431,20 @@ exports[`MantineShowInferencer should match the snapshot 1`] = `
           </div>
         </div>
         <h5
-          class="m-8a5d1357 mantine-Title-root"
+          class="mantine-Title-root"
           data-order="5"
           style="--title-fw: var(--mantine-h5-font-weight); --title-lh: var(--mantine-h5-line-height); --title-fz: var(--mantine-h5-font-size);"
         >
           Language
         </h5>
         <p
-          class="mantine-focus-auto m-b6d8b162 mantine-Text-root"
+          class="mantine-focus-auto mantine-Text-root"
         >
           2
         </p>
       </div>
       <div
-        class="m-4081bf90 mantine-Group-root"
+        class="mantine-Group-root"
         style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
       />
     </div>

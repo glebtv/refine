@@ -9,18 +9,18 @@ exports[`MantineListInferencer should match the snapshot 1`] = `
   </style>
   <div>
     <div
-      class="m-e615b15f mantine-Card-root m-1b7284a3 mantine-Paper-root"
+      class="mantine-Card-root mantine-Paper-root"
     >
       <div
-        class="m-4081bf90 mantine-Group-root"
+        class="mantine-Group-root"
         style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: space-between; --group-wrap: wrap;"
       >
         <div
-          class="m-6d731127 mantine-Stack-root"
+          class="mantine-Stack-root"
           style="--stack-gap: var(--mantine-spacing-xs); --stack-align: stretch; --stack-justify: flex-start;"
         >
           <h3
-            class="refine-pageHeader-title m-8a5d1357 mantine-Title-root"
+            class="refine-pageHeader-title mantine-Title-root"
             data-order="3"
             style="--title-fw: var(--mantine-h3-font-weight); --title-lh: var(--mantine-h3-line-height); --title-fz: var(--mantine-h3-font-size);"
           >
@@ -28,7 +28,7 @@ exports[`MantineListInferencer should match the snapshot 1`] = `
           </h3>
         </div>
         <div
-          class="m-4081bf90 mantine-Group-root"
+          class="mantine-Group-root"
           style="--group-gap: var(--mantine-spacing-xs); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
         />
       </div>
@@ -36,11 +36,11 @@ exports[`MantineListInferencer should match the snapshot 1`] = `
         class=""
       >
         <div
-          class="m-d57069b5 mantine-ScrollArea-root"
+          class="mantine-ScrollArea-root"
           style="--sa-corner-width: 0px; --sa-corner-height: 0px;"
         >
           <div
-            class="m-c0783ff9 mantine-ScrollArea-viewport"
+            class="mantine-ScrollArea-viewport"
             data-scrollbars="xy"
             style="overflow-x: scroll; overflow-y: scroll;"
           >
@@ -48,195 +48,195 @@ exports[`MantineListInferencer should match the snapshot 1`] = `
               style="min-width: 100%; display: table;"
             >
               <table
-                class="m-b23fa0ef mantine-Table-table"
+                class="mantine-Table-table"
                 style="--table-vertical-spacing: calc(0.4375rem * var(--mantine-scale));"
               >
                 <thead
-                  class="m-b242d975 mantine-Table-thead"
+                  class="mantine-Table-thead"
                 >
                   <tr
-                    class="m-4e7aa4fd mantine-Table-tr"
+                    class="mantine-Table-tr"
                     data-hover="true"
                     data-with-row-border="true"
                   >
                     <th
-                      class="m-4e7aa4f3 mantine-Table-th"
+                      class="mantine-Table-th"
                     >
                       Id
                     </th>
                     <th
-                      class="m-4e7aa4f3 mantine-Table-th"
+                      class="mantine-Table-th"
                     >
                       Title
                     </th>
                     <th
-                      class="m-4e7aa4f3 mantine-Table-th"
+                      class="mantine-Table-th"
                     >
                       Slug
                     </th>
                     <th
-                      class="m-4e7aa4f3 mantine-Table-th"
+                      class="mantine-Table-th"
                     >
                       Content
                     </th>
                     <th
-                      class="m-4e7aa4f3 mantine-Table-th"
+                      class="mantine-Table-th"
                     >
                       Hit
                     </th>
                     <th
-                      class="m-4e7aa4f3 mantine-Table-th"
+                      class="mantine-Table-th"
                     >
                       Category
                     </th>
                     <th
-                      class="m-4e7aa4f3 mantine-Table-th"
+                      class="mantine-Table-th"
                     >
                       User
                     </th>
                     <th
-                      class="m-4e7aa4f3 mantine-Table-th"
+                      class="mantine-Table-th"
                     >
                       Status
                     </th>
                     <th
-                      class="m-4e7aa4f3 mantine-Table-th"
+                      class="mantine-Table-th"
                     >
                       Status Color
                     </th>
                     <th
-                      class="m-4e7aa4f3 mantine-Table-th"
+                      class="mantine-Table-th"
                     >
                       Created At
                     </th>
                     <th
-                      class="m-4e7aa4f3 mantine-Table-th"
+                      class="mantine-Table-th"
                     >
                       Published At
                     </th>
                     <th
-                      class="m-4e7aa4f3 mantine-Table-th"
+                      class="mantine-Table-th"
                     >
                       Image
                     </th>
                     <th
-                      class="m-4e7aa4f3 mantine-Table-th"
+                      class="mantine-Table-th"
                     >
                       Tags
                     </th>
                     <th
-                      class="m-4e7aa4f3 mantine-Table-th"
+                      class="mantine-Table-th"
                     >
                       Language
                     </th>
                   </tr>
                 </thead>
                 <tbody
-                  class="m-b2404537 mantine-Table-tbody"
+                  class="mantine-Table-tbody"
                 >
                   <tr
-                    class="m-4e7aa4fd mantine-Table-tr"
+                    class="mantine-Table-tr"
                     data-hover="true"
                     data-with-row-border="true"
                   >
                     <td
-                      class="m-4e7aa4ef mantine-Table-td"
+                      class="mantine-Table-td"
                     >
                       11
                     </td>
                     <td
-                      class="m-4e7aa4ef mantine-Table-td"
+                      class="mantine-Table-td"
                     >
                       Nobis exercitationem officia quia est.
                     </td>
                     <td
-                      class="m-4e7aa4ef mantine-Table-td"
+                      class="mantine-Table-td"
                     >
                       provident-culpa-facere
                     </td>
                     <td
-                      class="m-4e7aa4ef mantine-Table-td"
+                      class="mantine-Table-td"
                     >
                       <p>
                         Non velit blanditiis optio quo quaerat nam aperiam. Odit tempore consequatur vol...
                       </p>
                     </td>
                     <td
-                      class="m-4e7aa4ef mantine-Table-td"
+                      class="mantine-Table-td"
                     >
                       920557
                     </td>
                     <td
-                      class="m-4e7aa4ef mantine-Table-td"
+                      class="mantine-Table-td"
                     >
                       Numquam Saepe Illo
                     </td>
                     <td
-                      class="m-4e7aa4ef mantine-Table-td"
+                      class="mantine-Table-td"
                     >
                       Eriberto Leannon
                     </td>
                     <td
-                      class="m-4e7aa4ef mantine-Table-td"
+                      class="mantine-Table-td"
                     >
                       draft
                     </td>
                     <td
-                      class="m-4e7aa4ef mantine-Table-td"
+                      class="mantine-Table-td"
                     >
                       orange
                     </td>
                     <td
-                      class="m-4e7aa4ef mantine-Table-td"
+                      class="mantine-Table-td"
                     >
                       <p
-                        class="mantine-focus-auto m-b6d8b162 mantine-Text-root"
+                        class="mantine-focus-auto mantine-Text-root"
                       >
                         04/02/2022
                       </p>
                     </td>
                     <td
-                      class="m-4e7aa4ef mantine-Table-td"
+                      class="mantine-Table-td"
                     >
                       <p
-                        class="mantine-focus-auto m-b6d8b162 mantine-Text-root"
+                        class="mantine-focus-auto mantine-Text-root"
                       >
                         08/10/2021
                       </p>
                     </td>
                     <td
-                      class="m-4e7aa4ef mantine-Table-td"
+                      class="mantine-Table-td"
                     >
                       <div
-                        class="m-4081bf90 mantine-Group-root"
+                        class="mantine-Group-root"
                         style="--group-gap: var(--mantine-spacing-xs); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
                       >
                         <img
-                          class="m-9e117634 mantine-Image-root"
+                          class="mantine-Image-root"
                           src="http://loremflickr.com/640/480/abstract"
                           sx="[object Object]"
                         />
                       </div>
                     </td>
                     <td
-                      class="m-4e7aa4ef mantine-Table-td"
+                      class="mantine-Table-td"
                     >
                       <div
-                        class="m-4081bf90 mantine-Group-root"
+                        class="mantine-Group-root"
                         style="--group-gap: var(--mantine-spacing-xs); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
                       >
                         <div
-                          class="m-f59ffda3 mantine-Chip-root"
+                          class="mantine-Chip-root"
                         >
                           <input
-                            class="m-bde07329 mantine-Chip-input"
-                            id="mantine-l81e06j7i"
+                            class="mantine-Chip-input"
+                            id=""
                             type="checkbox"
                             value=""
                           />
                           <label
-                            class="m-fa109255 m-be049a53 mantine-Chip-label"
-                            for="mantine-l81e06j7i"
+                            class="mantine-Chip-label"
+                            for=""
                           >
                             <span>
                               Nobis Et Ut
@@ -246,114 +246,114 @@ exports[`MantineListInferencer should match the snapshot 1`] = `
                       </div>
                     </td>
                     <td
-                      class="m-4e7aa4ef mantine-Table-td"
+                      class="mantine-Table-td"
                     >
                       2
                     </td>
                   </tr>
                   <tr
-                    class="m-4e7aa4fd mantine-Table-tr"
+                    class="mantine-Table-tr"
                     data-hover="true"
                     data-with-row-border="true"
                   >
                     <td
-                      class="m-4e7aa4ef mantine-Table-td"
+                      class="mantine-Table-td"
                     >
                       21
                     </td>
                     <td
-                      class="m-4e7aa4ef mantine-Table-td"
+                      class="mantine-Table-td"
                     >
                       Eaque in nesciunt.
                     </td>
                     <td
-                      class="m-4e7aa4ef mantine-Table-td"
+                      class="mantine-Table-td"
                     >
                       quod-quos-commodi
                     </td>
                     <td
-                      class="m-4e7aa4ef mantine-Table-td"
+                      class="mantine-Table-td"
                     >
                       <p>
                         Ut velit quo. Sed beatae et sit ea. Perferendis pariatur doloremque deleniti sap...
                       </p>
                     </td>
                     <td
-                      class="m-4e7aa4ef mantine-Table-td"
+                      class="mantine-Table-td"
                     >
                       175149
                     </td>
                     <td
-                      class="m-4e7aa4ef mantine-Table-td"
+                      class="mantine-Table-td"
                     >
                       Sit Natus Voluptatibus
                     </td>
                     <td
-                      class="m-4e7aa4ef mantine-Table-td"
+                      class="mantine-Table-td"
                     >
                       Tressie Reichel
                     </td>
                     <td
-                      class="m-4e7aa4ef mantine-Table-td"
+                      class="mantine-Table-td"
                     >
                       published
                     </td>
                     <td
-                      class="m-4e7aa4ef mantine-Table-td"
+                      class="mantine-Table-td"
                     >
                       lime
                     </td>
                     <td
-                      class="m-4e7aa4ef mantine-Table-td"
+                      class="mantine-Table-td"
                     >
                       <p
-                        class="mantine-focus-auto m-b6d8b162 mantine-Text-root"
+                        class="mantine-focus-auto mantine-Text-root"
                       >
                         09/24/2022
                       </p>
                     </td>
                     <td
-                      class="m-4e7aa4ef mantine-Table-td"
+                      class="mantine-Table-td"
                     >
                       <p
-                        class="mantine-focus-auto m-b6d8b162 mantine-Text-root"
+                        class="mantine-focus-auto mantine-Text-root"
                       >
                         09/01/2021
                       </p>
                     </td>
                     <td
-                      class="m-4e7aa4ef mantine-Table-td"
+                      class="mantine-Table-td"
                     >
                       <div
-                        class="m-4081bf90 mantine-Group-root"
+                        class="mantine-Group-root"
                         style="--group-gap: var(--mantine-spacing-xs); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
                       >
                         <img
-                          class="m-9e117634 mantine-Image-root"
+                          class="mantine-Image-root"
                           src="http://loremflickr.com/640/480/abstract"
                           sx="[object Object]"
                         />
                       </div>
                     </td>
                     <td
-                      class="m-4e7aa4ef mantine-Table-td"
+                      class="mantine-Table-td"
                     >
                       <div
-                        class="m-4081bf90 mantine-Group-root"
+                        class="mantine-Group-root"
                         style="--group-gap: var(--mantine-spacing-xs); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
                       >
                         <div
-                          class="m-f59ffda3 mantine-Chip-root"
+                          class="mantine-Chip-root"
                         >
                           <input
-                            class="m-bde07329 mantine-Chip-input"
-                            id="mantine-fiss1oagj"
+                            class="mantine-Chip-input"
+                            id=""
                             type="checkbox"
                             value=""
                           />
                           <label
-                            class="m-fa109255 m-be049a53 mantine-Chip-label"
-                            for="mantine-fiss1oagj"
+                            class="mantine-Chip-label"
+                            for=""
                           >
                             <span>
                               Error Eos Et
@@ -361,17 +361,17 @@ exports[`MantineListInferencer should match the snapshot 1`] = `
                           </label>
                         </div>
                         <div
-                          class="m-f59ffda3 mantine-Chip-root"
+                          class="mantine-Chip-root"
                         >
                           <input
-                            class="m-bde07329 mantine-Chip-input"
-                            id="mantine-qopwd51h8"
+                            class="mantine-Chip-input"
+                            id=""
                             type="checkbox"
                             value=""
                           />
                           <label
-                            class="m-fa109255 m-be049a53 mantine-Chip-label"
-                            for="mantine-qopwd51h8"
+                            class="mantine-Chip-label"
+                            for=""
                           >
                             <span>
                               Nobis Et Ut
@@ -381,7 +381,7 @@ exports[`MantineListInferencer should match the snapshot 1`] = `
                       </div>
                     </td>
                     <td
-                      class="m-4e7aa4ef mantine-Table-td"
+                      class="mantine-Table-td"
                     >
                       2
                     </td>
@@ -392,18 +392,18 @@ exports[`MantineListInferencer should match the snapshot 1`] = `
           </div>
         </div>
         <div
-          class="m-4081bf90 mantine-Group-root"
+          class="mantine-Group-root"
           style="--group-gap: var(--mantine-spacing-md); --group-align: center; --group-justify: right; --group-wrap: wrap;"
         >
           <div
-            class="m-4addd315 mantine-Pagination-root"
+            class="mantine-Pagination-root"
           >
             <div
-              class="m-4081bf90 mantine-Group-root"
+              class="mantine-Group-root"
               style="--group-gap: calc(0.5rem * var(--mantine-scale)); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
             >
               <button
-                class="mantine-focus-auto m-326d024a mantine-Pagination-control m-87cf2631 mantine-UnstyledButton-root"
+                class="mantine-focus-auto mantine-Pagination-control mantine-UnstyledButton-root"
                 data-disabled="true"
                 disabled=""
                 type="button"
@@ -420,7 +420,7 @@ exports[`MantineListInferencer should match the snapshot 1`] = `
               </button>
               <button
                 aria-current="page"
-                class="mantine-focus-auto mantine-active m-326d024a mantine-Pagination-control m-87cf2631 mantine-UnstyledButton-root"
+                class="mantine-focus-auto mantine-active mantine-Pagination-control mantine-UnstyledButton-root"
                 data-active="true"
                 data-with-padding="true"
                 type="button"
@@ -428,7 +428,7 @@ exports[`MantineListInferencer should match the snapshot 1`] = `
                 1
               </button>
               <button
-                class="mantine-focus-auto m-326d024a mantine-Pagination-control m-87cf2631 mantine-UnstyledButton-root"
+                class="mantine-focus-auto mantine-Pagination-control mantine-UnstyledButton-root"
                 data-disabled="true"
                 disabled=""
                 type="button"
