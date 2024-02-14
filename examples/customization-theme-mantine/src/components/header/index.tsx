@@ -4,9 +4,8 @@ import {
     Flex,
     Group,
 } from "@mantine/core";
-import { ColorSchemeControl } from "@mantine/ds";
+import { ColorSchemeControl } from "./ColorSchemeControl";
 
-import '@mantine/ds/styles.css';
 import { useThemedLayoutContext } from "@refinedev/mantine";
 
 import classes from './header.module.css';
@@ -20,13 +19,13 @@ export const Header: React.FC = () => {
             justify="space-between"
             wrap="nowrap"
             className={classes.header}
-            hiddenFrom="sm"
         >
 
             <Burger
                 opened={mobileSiderOpen}
                 onClick={() => setMobileSiderOpen(!mobileSiderOpen)}
                 size="sm"
+                hiddenFrom="sm"
             />
             <ColorSchemeControl />
         </Group>

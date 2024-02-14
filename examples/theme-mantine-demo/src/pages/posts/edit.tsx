@@ -1,5 +1,5 @@
-import { Edit, useForm, useSelect } from "@refinedev/mantine";
-import { Select, TextInput, Text } from "@mantine/core";
+import { Edit, useForm, useSelect, Select } from "@refinedev/mantine";
+import { TextInput, Text } from "@mantine/core";
 import MDEditor from "@uiw/react-md-editor";
 
 import { ICategory } from "../../interfaces";

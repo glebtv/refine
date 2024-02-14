@@ -1,5 +1,5 @@
-import { Create, useForm, useSelect } from "@refinedev/mantine";
-import { Select, TextInput, Text } from "@mantine/core";
+import { Create, useForm, useSelect, Select } from "@refinedev/mantine";
+import { TextInput, Text } from "@mantine/core";
 import MDEditor from "@uiw/react-md-editor";
 
 export const PostCreate: React.FC = () => {

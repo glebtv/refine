@@ -21,6 +21,7 @@ import {
     Tooltip,
     TooltipProps,
     Flex,
+    Burger,
     Box
 } from "@mantine/core";
 
@@ -40,7 +41,7 @@ export const ThemedSiderV2: React.FC<RefineThemedLayoutV2SiderProps> = ({
     Title: TitleFromProps,
     activeItemDisabled = false,
 }) => {
-    const { siderCollapsed } =
+    const { siderCollapsed, mobileSiderOpen, setMobileSiderOpen } =
         useThemedLayoutContext();
 
     const routerType = useRouterType();
@@ -235,6 +236,17 @@ export const ThemedSiderV2: React.FC<RefineThemedLayoutV2SiderProps> = ({
                 }}
             >
                 <RenderToTitle collapsed={collapsedLayout} />
+
+                <Burger
+                    opened={mobileSiderOpen}
+                    onClick={() => setMobileSiderOpen(!mobileSiderOpen)}
+                    hiddenFrom="sm"
+                    size="sm"
+                    style={{
+                        marginLeft: "auto",
+                        marginRight: "1rem"
+                    }}
+                />
             </Flex>
             <Box
                 mod={'grow'}

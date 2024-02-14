@@ -1,4 +1,4 @@
-import { MantineProvider, createTheme, MantineColorsTuple, MantineThemeOverride } from '@mantine/core';
+import { MantineProvider, createTheme, MantineColorsTuple, MantineThemeOverride, MantineTheme, MantineThemeColors } from '@mantine/core';
 
 const commonThemeProperties: MantineThemeOverride = {
     fontFamily: [

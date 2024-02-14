@@ -5,7 +5,6 @@
         "types"
     ],
     "compilerOptions": {
-        "traceResolution": true,
         "rootDir": ".",
         "types": [
             "jest"

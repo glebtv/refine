@@ -21,6 +21,7 @@ import {
     Tooltip,
     TooltipProps,
     useMantineTheme,
+    Burger,
     Flex,
 } from "@mantine/core";
 
@@ -215,23 +216,25 @@ export const ThemedSider: React.FC<RefineThemedLayoutSiderProps> = ({
                 pl={siderCollapsed ? 0 : "16px"}
                 align="center"
                 justify={siderCollapsed ? "center" : "flex-start"}
-                // style={{
-                     // borderBottom: `1px solid ${borderColor}`,
-                // }}
             >
                 <RenderToTitle collapsed={siderCollapsed} />
+
+                <Burger
+                    opened={mobileSiderOpen}
+                    onClick={() => setMobileSiderOpen(!mobileSiderOpen)}
+                    hiddenFrom="sm"
+                    size="sm"
+                    style={{
+                        marginLeft: "auto",
+                        marginRight: "1rem"
+                    }}
+                />
             </Flex>
             <AppShell.Section
                 grow
                 component={ScrollArea}
                 mx="-xs"
                 px="xs"
-                // sx={{
-                //     ".mantine-ScrollArea-viewport": {
-                //         borderRight: `1px solid ${borderColor}`,
-                //         borderBottom: `1px solid ${borderColor}`,
-                //     },
-                // }}
             >
                 {renderSider()}
             </AppShell.Section>

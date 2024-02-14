@@ -27,7 +27,7 @@ const App: React.FC = () => {
         <BrowserRouter>
             <GitHubBanner />
             <MantineProvider
-                theme={RefineThemes.Magenta}
+                theme={RefineThemes.Magenta as any}
             >
                 <Refine
                     routerProvider={routerProvider}

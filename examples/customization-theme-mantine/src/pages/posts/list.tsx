@@ -204,13 +204,14 @@ export const PostList: React.FC = () => {
                         })}
                     </tbody>
                 </Table>
-                <br />
-                <Pagination
-                    position="right"
-                    total={pageCount}
-                    page={current}
-                    onChange={setCurrent}
-                />
+
+                <Group mt="md" justify="right">
+                    <Pagination
+                        total={pageCount}
+                        value={current}
+                        onChange={setCurrent}
+                    />
+                </Group>
             </List>
         </ScrollArea>
     );
