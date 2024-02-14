@@ -26,7 +26,7 @@ window.MantineProvider = MantineProvider
 
 import { defaultTheme } from '@theme';
 
-import { MockRouterProvider } from "@refinedev/ui-tests/dist/test";
+import { MockRouterProvider } from "@refinedev/ui-tests";
 
 const List = () => {
     return <div>hede</div>;
@@ -131,7 +131,7 @@ export {
     mockLegacyRouterProvider,
     MockRouterProvider,
     mockLegacyAuthProvider,
-} from "@refinedev/ui-tests/dist/test";
+} from "@refinedev/ui-tests";
 
 // re-export everything
 export * from "@testing-library/react";
