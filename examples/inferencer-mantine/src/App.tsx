@@ -74,16 +74,6 @@ function App() {
                                 i18nProvider={i18nProvider}
                                 resources={[
                                     {
-                                        name: "posts",
-                                        list: "/posts",
-                                        create: "/posts/create",
-                                        edit: "/posts/edit/:id",
-                                        show: "/posts/show/:id",
-                                        meta: {
-                                            canDelete: true,
-                                        },
-                                    },
-                                    {
                                         name: "blog_posts",
                                         list: "/blog-posts",
                                         create: "/blog-posts/create",

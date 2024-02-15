@@ -2,6 +2,7 @@ import {
     Edit,
     useForm,
     useSelect,
+    useMultiSelect,
     MultiSelect,
     Select
 } from "@refinedev/mantine";
@@ -84,7 +85,11 @@ export const renderer = ({
         .filter(Boolean)
         .map((field) => {
             if (field?.relation && !field.fieldable && field.resource) {
-                imports.push(["useSelect", "@refinedev/mantine"]);
+                if (field.multiple) {
+                    imports.push(["useMultiSelect", "@refinedev/mantine"]);
+                } else {
+                    imports.push(["useSelect", "@refinedev/mantine"]);
+                }
 
                 let val = accessor(
                     recordName,
@@ -117,7 +122,7 @@ export const renderer = ({
                     field.key,
                     "SelectProps",
                 )} } =
-                useSelect({
+                ${field.multiple ? "useMultiSelect" : "useSelect"}({
                     resource: "${field.resource.name}",
                     defaultValue: ${val},
                     ${getOptionLabel(field)}
@@ -509,6 +514,7 @@ export const EditInferencer: InferencerResultComponent = createInferencer({
                 Edit,
                 useForm,
                 useSelect,
+                useMultiSelect,
                 MultiSelect,
                 Select
             }
