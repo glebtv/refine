@@ -53,7 +53,7 @@ export const packageMap: Record<string, string> = {
     "i18next-browser-languagedetector": "I18NextBrowserLanguageDetector",
     "i18next-xhr-backend": "I18NextXhrBackend",
     casbin: "Casbin",
-    "@uiw/react-md-editor": "MDEditorNamespace",
+    "@uiw/react-md-editor": "MDEditor",
     uuid: "UUID",
     "graphql-tag": "GraphQLTag",
     "graphql-ws": "GraphQLWS",

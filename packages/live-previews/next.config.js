@@ -14,7 +14,6 @@ const nextConfig = {
         return config;
     },
     output: "standalone",
-    transpilePackages: ["@uiw/react-md-editor"],
 };
 
 module.exports = nextConfig;
